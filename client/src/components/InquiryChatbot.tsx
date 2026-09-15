@@ -133,7 +133,7 @@ export default function InquiryChatbot() {
                   placeholder="Your name"
                   required
                   disabled={state === "sending"}
-                  className="min-h-[44px] border-gray-300"
+                  className="min-h-[44px] border-gray-300 bg-white"
                 />
               </div>
               <div>
@@ -145,7 +145,7 @@ export default function InquiryChatbot() {
                   placeholder="you@company.com"
                   required
                   disabled={state === "sending"}
-                  className="min-h-[44px] border-gray-300"
+                  className="min-h-[44px] border-gray-300 bg-white"
                 />
               </div>
               <div>

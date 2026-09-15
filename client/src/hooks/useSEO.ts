@@ -27,7 +27,7 @@ export function useSEO({
   jsonLd,
 }: SEOConfig) {
   useEffect(() => {
-    const fullTitle = title.includes(SITE_NAME)
+    const fullTitle = (title.includes(SITE_NAME) || title.includes("Orbit2Orbit Express"))
       ? title
       : `${title} | ${SITE_NAME}`;
     document.title = fullTitle;
@@ -44,6 +44,7 @@ export function useSEO({
 
     setMeta("name", "description", description);
     if (keywords) setMeta("name", "keywords", keywords);
+    else document.querySelectorAll('meta[name="keywords"]').forEach(el => el.remove());
 
     setMeta("property", "og:title", ogTitle || fullTitle);
     setMeta("property", "og:description", ogDescription || description);

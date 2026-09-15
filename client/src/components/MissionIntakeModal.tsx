@@ -357,8 +357,16 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
         additionalContext: additionalContext.trim() || undefined,
       });
       setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or email vlad@orbit2orbitexpress.com directly.");
+    } catch (submitError) {
+      const message = submitError instanceof Error ? submitError.message : "";
+      const status = message.match(/^([0-9]{3}):/)?.[1];
+      if (status === "400") {
+        setError("Some answers could not be accepted. Check your contact details and field lengths. If you entered a website, include https:// at the beginning. Your answers are still here; use Back to review them.");
+      } else if (status === "502") {
+        setError("Your brief could not be emailed to Vlad. Your answers are still here while this form stays open. Please contact vlad@orbit2orbitexpress.com directly; this submission is not confirmed.");
+      } else {
+        setError("We could not confirm your submission. Check your connection and try again. Your answers are still here while this form stays open. You can also contact vlad@orbit2orbitexpress.com.");
+      }
     } finally {
       setSubmitting(false);
     }

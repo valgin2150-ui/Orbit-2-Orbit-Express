@@ -1,9 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { X, ChevronRight } from "lucide-react";
+import { X, CheckCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
-
+import { apiRequest } from "@/lib/queryClient";
 
 interface MissionIntakeModalProps {
   isOpen: boolean;
@@ -227,6 +226,9 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
   const [phone, setPhone] = useState("");
   const [organization, setOrganization] = useState("");
   const [website, setWebsite] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const [draftReady, setDraftReady] = useState(false);
 
   const reset = useCallback(() => {
@@ -258,6 +260,9 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
     setPhone("");
     setOrganization("");
     setWebsite("");
+    setSubmitting(false);
+    setSubmitted(false);
+    setError("");
     setDraftReady(false);
   }, []);
 
@@ -316,6 +321,50 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
 
   const handleBack = () => {
     if (step > 1) setStep((s) => s - 1);
+  };
+
+  const handleSubmit = async () => {
+    if (!canAdvance()) return;
+    setSubmitting(true);
+    setError("");
+    setDraftReady(false);
+    try {
+      await apiRequest("POST", "/api/mission-intake", {
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        organization: organization.trim() || undefined,
+        website: website.trim() || undefined,
+        missionObjective: missionObjective.trim() || undefined,
+        missionSuccess: missionSuccess.trim() || undefined,
+        payloadDimensions: payloadDimensions.trim() || undefined,
+        formFactor: formFactor.trim() || undefined,
+        desiredAltitude: desiredAltitude.trim() || undefined,
+        desiredInclination: desiredInclination.trim() || undefined,
+        missionMaturity: missionMaturity || undefined,
+        spacecraftStatus: spacecraftStatus || undefined,
+        technicalRequirements,
+        specialHandling,
+        regulatoryStatus,
+        earliestFlightDate: earliestFlightDate || undefined,
+        latestFlightDate: latestFlightDate || undefined,
+        timingFlexible: timingFlexible || undefined,
+        biggestQuestion: biggestQuestion.trim() || undefined,
+        budgetRange: budgetRange || undefined,
+        payloadType,
+        payloadMass: payloadMass.trim() || undefined,
+        destination,
+        timeline,
+        challenges,
+        additionalContext: additionalContext.trim() || undefined,
+      });
+      setSubmitted(true);
+    } catch {
+      setError("We couldn't deliver your brief automatically. Your answers are still here—try again or use one of the options below.");
+      setDraftReady(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const briefFields: Array<[string, string]> = [
@@ -416,7 +465,30 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
         </div>
 
         <div className="px-6 py-5">
-          <>
+          {submitted ? (
+            <div className="py-6 text-center">
+              <CheckCircle className="w-10 h-10 mx-auto mb-4" style={{ color: "#2e7d32" }} />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-500 mb-2">
+                MISSION BRIEF RECEIVED
+              </p>
+              <p className="text-gray-900 text-base mb-3">
+                Thank you, <span className="font-semibold">{name}</span>. Your Mission Brief has been delivered to Vlad.
+              </p>
+              <p className="text-sm text-gray-500 mb-5">
+                We'll be in touch within 24 hours to schedule your consultation.
+              </p>
+              <a
+                href="https://calendar.app.google/nQ8xro2EQ9UwhqmT7"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => (window as any).plausible?.("Booking Click")}
+                className="inline-block bg-[#e3000f] text-white text-sm font-medium px-5 py-2.5 hover:bg-[#c0000d] transition-colors"
+              >
+                Book Your Free 30-Minute Call →
+              </a>
+            </div>
+          ) : (
+            <>
               <ProgressBar step={step} />
 
               {step === 1 && (
@@ -647,7 +719,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                 <div>
                   <FieldLabel>Let's talk</FieldLabel>
                   <p className="text-xs text-gray-400 mb-4">
-                    Prepare an email to Vlad, review your answers, then press Send in your email app. Nothing is sent by this form. Answers remain here until you close or reload it.
+                    Send your Mission Brief directly to Vlad. We'll reach out within 24 hours to schedule a focused 30-minute conversation.
                   </p>
                   <div className="space-y-3 mb-5">
                     <Input
@@ -695,13 +767,16 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                     />
                   </div>
 
+                  {error && (
+                    <p role="alert" className="text-sm text-red-600 mb-3">{error}</p>
+                  )}
                   {draftReady && (
                     <section className="mt-4 border border-gray-300 bg-white p-3 text-sm text-gray-800" aria-label="Prepared mission brief">
-                      <p role="status" className="font-semibold">Your brief is ready to review — it has not been sent.</p>
+                      <p className="font-semibold">Your completed brief has not been lost.</p>
                       <p className="mt-2">
                         {needsAttachment
                           ? "Your answers are too long for an email link. Download the complete brief and attach it, or copy the text below into your email before sending. The email link opens a short introduction only; it does not attach the file."
-                          : "Open your email app, review the completed message, and press Send there."}
+                          : "You can try automatic delivery again or open the completed message in your email app."}
                       </p>
                       <label className="block mt-3">
                         Complete brief — select and copy if needed
@@ -728,12 +803,14 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
               <div className="mt-6">
                 <Button
                   type="button"
-                  onClick={step === TOTAL_STEPS ? () => setDraftReady(true) : handleNext}
-                  disabled={!canAdvance()}
+                  onClick={step === TOTAL_STEPS ? handleSubmit : handleNext}
+                  disabled={!canAdvance() || submitting}
                   className="w-full h-11 bg-[#e3000f] hover:bg-[#c0000d] text-white text-sm font-medium rounded-none border-0 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  {step === TOTAL_STEPS
-                    ? "Prepare Email Draft →"
+                  {submitting
+                    ? "Sending…"
+                    : step === TOTAL_STEPS
+                    ? draftReady ? "Try Sending Again →" : "Send Mission Brief →"
                     : (
                       <span className="flex items-center justify-center gap-1">
                         Next <ChevronRight className="w-4 h-4" />
@@ -750,7 +827,8 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                   </button>
                 )}
               </div>
-          </>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { X, CheckCircle, ChevronRight } from "lucide-react";
+import { X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { apiRequest } from "@/lib/queryClient";
+
 
 
 interface MissionIntakeModalProps {
@@ -227,9 +227,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
   const [phone, setPhone] = useState("");
   const [organization, setOrganization] = useState("");
   const [website, setWebsite] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
+  const [draftReady, setDraftReady] = useState(false);
 
   const reset = useCallback(() => {
     setStep(1);
@@ -260,9 +258,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
     setPhone("");
     setOrganization("");
     setWebsite("");
-    setSubmitting(false);
-    setSubmitted(false);
-    setError("");
+    setDraftReady(false);
   }, []);
 
   const handleClose = useCallback(() => {
@@ -322,54 +318,55 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
     if (step > 1) setStep((s) => s - 1);
   };
 
-  const handleSubmit = async () => {
-    if (!canAdvance()) return;
-    setSubmitting(true);
-    setError("");
-    try {
-      await apiRequest("POST", "/api/mission-intake", {
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        organization: organization.trim() || undefined,
-        website: website.trim() || undefined,
-        missionObjective: missionObjective.trim() || undefined,
-        missionSuccess: missionSuccess.trim() || undefined,
-        payloadDimensions: payloadDimensions.trim() || undefined,
-        formFactor: formFactor.trim() || undefined,
-        desiredAltitude: desiredAltitude.trim() || undefined,
-        desiredInclination: desiredInclination.trim() || undefined,
-        missionMaturity: missionMaturity || undefined,
-        spacecraftStatus: spacecraftStatus || undefined,
-        technicalRequirements,
-        specialHandling,
-        regulatoryStatus,
-        earliestFlightDate: earliestFlightDate || undefined,
-        latestFlightDate: latestFlightDate || undefined,
-        timingFlexible: timingFlexible || undefined,
-        biggestQuestion: biggestQuestion.trim() || undefined,
-        budgetRange: budgetRange || undefined,
-        payloadType,
-        payloadMass: payloadMass.trim() || undefined,
-        destination,
-        timeline,
-        challenges,
-        additionalContext: additionalContext.trim() || undefined,
-      });
-      setSubmitted(true);
-    } catch (submitError) {
-      const message = submitError instanceof Error ? submitError.message : "";
-      const status = message.match(/^([0-9]{3}):/)?.[1];
-      if (status === "400") {
-        setError("Some answers could not be accepted. Check your contact details and field lengths. If you entered a website, include https:// at the beginning. Your answers are still here; use Back to review them.");
-      } else if (status === "502") {
-        setError("Your brief could not be emailed to Vlad. Your answers are still here while this form stays open. Please contact vlad@orbit2orbitexpress.com directly; this submission is not confirmed.");
-      } else {
-        setError("We could not confirm your submission. Check your connection and try again. Your answers are still here while this form stays open. You can also contact vlad@orbit2orbitexpress.com.");
-      }
-    } finally {
-      setSubmitting(false);
-    }
+  const briefFields: Array<[string, string]> = [
+    ["Name", name],
+    ["Email", email],
+    ["Phone", phone],
+    ["Organization", organization],
+    ["Website", website],
+    ["Mission Objective", missionObjective],
+    ["Mission Success", missionSuccess],
+    ["Payload Type", payloadType],
+    ["Payload Mass (kg)", payloadMass],
+    ["Payload Dimensions", payloadDimensions],
+    ["Form Factor", formFactor],
+    ["Destination", destination],
+    ["Desired Altitude", desiredAltitude],
+    ["Desired Inclination", desiredInclination],
+    ["Mission Maturity", missionMaturity],
+    ["Spacecraft Status", spacecraftStatus],
+    ["Technical Requirements", technicalRequirements.join("; ")],
+    ["Special Handling", specialHandling.join("; ")],
+    ["Regulatory Status", regulatoryStatus.join("; ")],
+    ["Timeline", timeline],
+    ["Earliest Flight Date", earliestFlightDate],
+    ["Latest Flight Date", latestFlightDate],
+    ["Timing Flexible", timingFlexible],
+    ["Challenges", challenges.join("; ")],
+    ["Biggest Question", biggestQuestion],
+    ["Budget Range", budgetRange],
+    ["Additional Context", additionalContext],
+  ];
+  const brief = "O2O Mission Brief\n\n" + briefFields
+    .map(([label, value]) => label + ": " + (value.trim() || "Not provided"))
+    .join("\n\n");
+  const emailPrefix = "mailto:vlad@orbit2orbitexpress.com?subject=" +
+    encodeURIComponent("O2O Mission Brief") + "&body=";
+  const fullEmailHref = emailPrefix + encodeURIComponent(brief);
+  // Bound the encoded URL rather than the unencoded character count.
+  const needsAttachment = fullEmailHref.length > 1800;
+  const emailHref = needsAttachment
+    ? emailPrefix + encodeURIComponent("Hi Vlad,\n\nI would like to discuss my mission. I will attach my completed Mission Brief or paste it below before sending.")
+    : fullEmailHref;
+  const downloadBrief = () => {
+    const url = URL.createObjectURL(new Blob([brief], { type: "text/plain;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "O2O-mission-brief.txt";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   if (!isOpen) return null;
@@ -419,37 +416,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
         </div>
 
         <div className="px-6 py-5">
-          {submitted ? (
-            <div className="py-6 text-center">
-              <CheckCircle className="w-10 h-10 mx-auto mb-4" style={{ color: "#2e7d32" }} />
-              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-500 mb-2">
-                MISSION BRIEF RECEIVED
-              </p>
-              <p className="text-gray-900 text-base mb-3">
-                Thank you, <span className="font-semibold">{name}</span>. Your intake has been sent to Vlad.
-              </p>
-              <p className="text-sm text-gray-500 mb-5">
-                We'll be in touch within 24 hours to schedule your consultation.<br />
-                Questions in the meantime?{" "}
-                <a
-                  href="mailto:vlad@orbit2orbitexpress.com"
-                  className="text-[#e3000f] underline"
-                >
-                  vlad@orbit2orbitexpress.com
-                </a>
-              </p>
-              <a
-                href="https://calendar.app.google/nQ8xro2EQ9UwhqmT7"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => (window as any).plausible?.("Booking Click")}
-                className="inline-block bg-[#e3000f] text-white text-sm font-medium px-5 py-2.5 hover:bg-[#c0000d] transition-colors"
-              >
-                Book Your Free 30-Minute Call →
-              </a>
-            </div>
-          ) : (
-            <>
+          <>
               <ProgressBar step={step} />
 
               {step === 1 && (
@@ -680,7 +647,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                 <div>
                   <FieldLabel>Let's talk</FieldLabel>
                   <p className="text-xs text-gray-400 mb-4">
-                    Send us your mission brief and we'll reach out within 24 hours to schedule a free 30-minute call — focused on your payload, not a sales pitch.
+                    Prepare an email to Vlad, review your answers, then press Send in your email app. Nothing is sent by this form. Answers remain here until you close or reload it.
                   </p>
                   <div className="space-y-3 mb-5">
                     <Input
@@ -728,8 +695,24 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                     />
                   </div>
 
-                  {error && (
-                    <p className="text-sm text-red-600 mb-3">{error}</p>
+                  {draftReady && (
+                    <section className="mt-4 border border-gray-300 bg-white p-3 text-sm text-gray-800" aria-label="Prepared mission brief">
+                      <p role="status" className="font-semibold">Your brief is ready to review — it has not been sent.</p>
+                      <p className="mt-2">
+                        {needsAttachment
+                          ? "Your answers are too long for an email link. Download the complete brief and attach it, or copy the text below into your email before sending. The email link opens a short introduction only; it does not attach the file."
+                          : "Open your email app, review the completed message, and press Send there."}
+                      </p>
+                      <label className="block mt-3">
+                        Complete brief — select and copy if needed
+                        <textarea readOnly rows={8} value={brief} className="mt-1 w-full bg-white text-gray-800 border border-gray-300 p-2" />
+                      </label>
+                      <div className="flex flex-wrap gap-3 mt-3">
+                        <button type="button" onClick={downloadBrief} className="underline">Download complete brief</button>
+                        <a href={emailHref} className="underline">Open email draft</a>
+                      </div>
+                      <p className="mt-3">If no email app opens, copy this brief or attach the downloaded file in your usual email service and send it to vlad@orbit2orbitexpress.com.</p>
+                    </section>
                   )}
                   <p className="text-xs text-gray-400 mt-3">
                     Prefer to talk first?{" "}
@@ -745,21 +728,19 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
               <div className="mt-6">
                 <Button
                   type="button"
-                  onClick={step === TOTAL_STEPS ? handleSubmit : handleNext}
-                  disabled={!canAdvance() || submitting}
+                  onClick={step === TOTAL_STEPS ? () => setDraftReady(true) : handleNext}
+                  disabled={!canAdvance()}
                   className="w-full h-11 bg-[#e3000f] hover:bg-[#c0000d] text-white text-sm font-medium rounded-none border-0 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  {submitting
-                    ? "Submitting…"
-                    : step === TOTAL_STEPS
-                    ? "Send Mission Brief →"
+                  {step === TOTAL_STEPS
+                    ? "Prepare Email Draft →"
                     : (
                       <span className="flex items-center justify-center gap-1">
                         Next <ChevronRight className="w-4 h-4" />
                       </span>
                     )}
                 </Button>
-                {step > 1 && !submitted && (
+                {step > 1 && (
                   <button
                     type="button"
                     onClick={handleBack}
@@ -769,8 +750,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                   </button>
                 )}
               </div>
-            </>
-          )}
+          </>
         </div>
       </div>
     </div>

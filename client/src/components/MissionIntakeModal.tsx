@@ -476,7 +476,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                       placeholder="A short description of the research, product, or operational objective"
                       value={missionObjective}
                       onChange={(e) => setMissionObjective(e.target.value)}
-                      className="w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
+                      className="bg-white w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
                     />
                   </div>
                   <details className="mt-4 border-t border-gray-100 pt-4">
@@ -490,7 +490,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                         value={missionSuccess}
                         onChange={(e) => setMissionSuccess(e.target.value)}
                         aria-label="Mission success"
-                        className="w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
+                        className="bg-white w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
                       />
                       <Input
                         type="text"
@@ -623,7 +623,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                       placeholder="Mission context, constraints, specific questions…"
                       value={additionalContext}
                       onChange={(e) => setAdditionalContext(e.target.value)}
-                      className="w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
+                      className="bg-white w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
                     />
                   </div>
                   <details className="mt-4 border-t border-gray-100 pt-4">
@@ -661,7 +661,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                         value={biggestQuestion}
                         onChange={(e) => setBiggestQuestion(e.target.value)}
                         aria-label="Biggest question"
-                        className="w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
+                        className="bg-white w-full border border-gray-300 px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e3000f] resize-none"
                       />
                     </div>
                   </details>

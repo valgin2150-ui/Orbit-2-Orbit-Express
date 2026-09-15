@@ -1,0 +1,97 @@
+/* Print styles for Orbit to Orbit Express */
+@media print {
+  /* Hide non-printable elements */
+  .non-printable {
+    display: none !important;
+  }
+
+  /* Basic page setup */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* Result cards */
+  .print-friendly {
+    page-break-inside: avoid;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Make text readable in print */
+  .print-text-dark {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  
+  .print-text-primary {
+    color: #38bec9 !important;
+    -webkit-text-fill-color: #38bec9 !important;
+  }
+  
+  /* Ensure metrics are visible in exports */
+  [class*="text-teal-"], [class*="text-neutral-"] {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Ensure labels and values print clearly */
+  .print-label {
+    color: #333 !important;
+    font-weight: bold !important;
+  }
+  
+  .print-value {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+  }
+  
+  /* Ensure gradients print as solid colors */
+  .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #38bec9 !important;
+    color: #38bec9 !important;
+  }
+  
+  /* Add page title */
+  .print-container::before {
+    content: "Orbit Logistics - Cargo Mission Report";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add date to printed document */
+  .print-container::after {
+    content: "Generated on " attr(data-print-date);
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  
+  /* Make sure images print properly */
+  img {
+    max-width: 100% !important;
+  }
+  
+  /* Remove unnecessary backgrounds */
+  * {
+    box-shadow: none !important;
+  }
+  
+  /* Ensure content fits on page */
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

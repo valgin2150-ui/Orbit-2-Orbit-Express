@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Very Low Earth Orbit",
+    "slug": "vleo",
+    "abbreviation": "VLEO",
+    "altitudeKm": "200–350 km",
+    "deltaVKms": 9.2,
+    "category": "Earth Orbits",
+    "typicalUseCases": [
+      "High-resolution Earth imaging",
+      "Atmospheric science",
+      "Technology demonstrations",
+      "Direct-to-device communications"
+    ],
+    "exampleMissions": [
+      "Albedo Space high-resolution imaging constellation",
+      "ESA GOCE-class atmospheric drag experiments",
+      "Skimsat drag-sail technology demonstrators"
+    ],
+    "description": "Very Low Earth Orbit encompasses altitudes from 200–350 km where atmospheric drag is significant but orbital mechanics are well understood. VLEO offers the highest spatial resolution for Earth observation and the lowest communications latency of any orbit. Satellites require electric propulsion for continuous reboost, making drag-tolerant design a key engineering driver. Commercial interest is growing, with operators such as Albedo Space targeting sub-30 cm imagery from VLEO."
+  },
+  {
+    "name": "Low Earth Orbit",
+    "slug": "leo",
+    "abbreviation": "LEO",
+    "altitudeKm": "400–2,000 km",
+    "deltaVKms": 9.4,
+    "category": "Earth Orbits",
+    "typicalUseCases": [
+      "Broadband satellite constellations",
+      "Earth observation",
+      "Crewed spaceflight",
+      "IoT connectivity"
+    ],
+    "exampleMissions": [
+      "SpaceX Starlink (~7,000 satellites operational, 530 km)",
+      "Amazon Kuiper broadband constellation (590–630 km)",
+      "International Space Station (408 km)"
+    ],
+    "description": "Low Earth Orbit is the most commercially active orbital regime, hosting thousands of satellites across broadband, Earth observation, and scientific platforms. Its relatively low altitude minimizes signal latency and launch costs while keeping satellites within reach of routine rocket performance. The Starlink and Amazon Kuiper constellations are the dominant LEO broadband operators as of 2026, with Falcon 9 reuse driving launch costs to their lowest-ever levels."
+  },
+  {
+    "name": "Medium Earth Orbit",
+    "slug": "meo",
+    "abbreviation": "MEO",
+    "altitudeKm": "2,000–35,786 km",
+    "deltaVKms": 10.2,
+    "category": "Earth Orbits",
+    "typicalUseCases": [
+      "Global navigation systems",
+      "Navigation augmentation",
+      "Communications relay",
+      "Radiation environment research"
+    ],
+    "exampleMissions": [
+      "GPS Block III constellation (20,200 km)",
+      "Galileo FOC constellation (23,222 km)",
+      "SES O3b mPOWER broadband constellation (8,063 km)"
+    ],
+    "description": "Medium Earth Orbit is home to the world's global navigation satellite systems including GPS, GLONASS, Galileo, and BeiDou. MEO offers a balance between Earth coverage footprint and signal path length, making it ideal for positioning, navigation, and timing (PNT) services. SES's O3b mPOWER constellation has expanded MEO commercial broadband capacity significantly through 2025–2026."
+  },
+  {
+    "name": "Highly Elliptical Orbit",
+    "slug": "heo",
+    "abbreviation": "HEO",
+    "altitudeKm": "500–40,000 km (elliptical)",
+    "deltaVKms": 11.5,
+    "category": "Earth Orbits",
+    "typicalUseCases": [
+      "High-latitude communications",
+      "Intelligence gathering",
+      "Space weather monitoring",
+      "Scientific observation"
+    ],
+    "exampleMissions": [
+      "Meridian Russian military communications relay",
+      "Chandra X-ray Observatory (10,000–140,000 km apogee)",
+      "IBEX heliospheric science mission"
+    ],
+    "description": "Highly Elliptical Orbits have a low perigee and a high apogee, allowing satellites to spend most of their time at high altitudes over specific geographic regions. HEO is widely used for Arctic communications coverage and scientific missions requiring varied distance from Earth. The Molniya and Tundra orbital families are specialized subsets of HEO."
+  },
+  {
+    "name": "Geostationary Orbit",
+    "slug": "geo",
+    "abbreviation": "GEO",
+    "altitudeKm": "35,786 km",
+    "deltaVKms": 13.7,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "Broadcast television",
+      "Weather monitoring",
+      "Global communications",
+      "Military surveillance"
+    ],
+    "exampleMissions": [
+      "GOES-18 & GOES-19 NOAA weather satellites",
+      "Intelsat / SES global communications network",
+      "Eutelsat KONNECT VHTS broadband"
+    ],
+    "description": "Geostationary Orbit positions satellites at 35,786 km altitude directly over the equator, where orbital period matches Earth's rotation — making them appear stationary from the ground. GEO is the backbone of global television broadcast, weather forecasting, and wide-area communications infrastructure. Traditional GEO communications satellites face increasing competition from LEO constellations but remain essential for broadcast, government, and wide-area applications."
+  },
+  {
+    "name": "Geosynchronous Orbit",
+    "slug": "gso",
+    "abbreviation": "GSO",
+    "altitudeKm": "35,786 km (inclined)",
+    "deltaVKms": 13.4,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "Military communications",
+      "High-latitude coverage",
+      "Navigation augmentation",
+      "Broadcast augmentation"
+    ],
+    "exampleMissions": [
+      "QZSS Japanese navigation augmentation system",
+      "NAVIC/IRNSS Indian regional navigation satellites",
+      "SDS military data relay satellites"
+    ],
+    "description": "Geosynchronous Orbit shares GEO's 24-hour period but at a non-zero inclination, causing the satellite to trace a figure-eight pattern (analemma) over the equator. This allows coverage of higher latitudes than true GEO and is used for navigation augmentation and specialized military communications. Japan's QZSS system is a prominent operational example, providing GPS augmentation across the Asia-Pacific region."
+  },
+  {
+    "name": "Sun-Synchronous Orbit",
+    "slug": "sso",
+    "abbreviation": "SSO",
+    "altitudeKm": "400–1,000 km",
+    "deltaVKms": 9.8,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "Optical Earth observation",
+      "Agricultural monitoring",
+      "Climate and environmental studies",
+      "Maritime surveillance"
+    ],
+    "exampleMissions": [
+      "Planet SuperDove constellation (hundreds of satellites)",
+      "Sentinel-2C ESA Copernicus (launched Sept 2024)",
+      "Landsat 9 multispectral mission"
+    ],
+    "description": "Sun-Synchronous Orbit is a near-polar orbit where the satellite passes over any given point on Earth at the same local solar time each day, ensuring consistent lighting for optical imagery. SSO is the dominant orbit for commercial and government Earth observation missions. Planet Labs operates hundreds of SuperDove imaging satellites in SSO, providing sub-daily revisit of any location on Earth."
+  },
+  {
+    "name": "Polar Orbit",
+    "slug": "polar",
+    "abbreviation": "PO",
+    "altitudeKm": "200–1,000 km",
+    "deltaVKms": 9.7,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "Global weather monitoring",
+      "Reconnaissance imaging",
+      "Scientific global surveys",
+      "AIS maritime tracking"
+    ],
+    "exampleMissions": [
+      "NOAA-21 (JPSS-2) polar weather satellite",
+      "ICESat-2 ice sheet laser altimeter mission",
+      "Spire Global AIS and weather constellation"
+    ],
+    "description": "Polar Orbit passes over or near both poles of Earth during each revolution, providing coverage of the entire planet within a single day. It is used extensively for weather forecasting, reconnaissance, and scientific missions requiring global coverage without time-of-day constraints. NOAA-21, launched in 2022 and fully operational through 2026, is the newest JPSS-series polar weather satellite."
+  },
+  {
+    "name": "Geostationary Transfer Orbit",
+    "slug": "gto",
+    "abbreviation": "GTO",
+    "altitudeKm": "200 × 35,786 km (elliptical)",
+    "deltaVKms": 12.3,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "GEO communications satellite delivery",
+      "Commercial broadcast satellite deployment",
+      "Navigation satellite transfer",
+      "Deep space injection staging"
+    ],
+    "exampleMissions": [
+      "SES-20 & SES-21 dual-manifest on Falcon Heavy",
+      "Eutelsat 36D communications satellite",
+      "Inmarsat I-6 broadband relay"
+    ],
+    "description": "Geostationary Transfer Orbit is the standard intermediate elliptical orbit used to deliver satellites to GEO. Rockets inject the payload into GTO, and the spacecraft's onboard propulsion circularizes the orbit at GEO altitude — a key design driver for commercial communications satellite propellant budgets. All-electric satellite platforms using ion propulsion are increasingly popular, trading a longer orbit-raising time (3–6 months) for greatly reduced launch mass."
+  },
+  {
+    "name": "Molniya Orbit",
+    "slug": "molniya",
+    "abbreviation": "Molniya",
+    "altitudeKm": "500 × 40,000 km (63.4° inclination)",
+    "deltaVKms": 11.3,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "High-latitude communications",
+      "Arctic regional coverage",
+      "Russian military communications",
+      "Northern hemisphere broadcasting"
+    ],
+    "exampleMissions": [
+      "Meridian Russian military relay satellites",
+      "Historical Soviet Molniya communications system",
+      "IBEX heliospheric apogee passes (science)"
+    ],
+    "description": "Molniya Orbit is a highly elliptical orbit inclined at 63.4° designed to provide persistent coverage over high-latitude regions where GEO satellites have poor visibility. A satellite in Molniya orbit spends approximately 11 hours near apogee over a target region during each 12-hour period. The critical inclination of 63.4° prevents apsidal precession, keeping the apogee locked over the northern hemisphere."
+  },
+  {
+    "name": "Tundra Orbit",
+    "slug": "tundra",
+    "abbreviation": "Tundra",
+    "altitudeKm": "~46,000 km apogee (24h period)",
+    "deltaVKms": 11.8,
+    "category": "Special Earth Orbits",
+    "typicalUseCases": [
+      "Early missile warning",
+      "High-latitude persistent surveillance",
+      "Arctic communications",
+      "Space weather monitoring"
+    ],
+    "exampleMissions": [
+      "SBIRS HEO sensors (Space-Based Infrared System)",
+      "EKS / Tundra Russian early-warning constellation",
+      "QZSS-4 quasi-zenith augmentation satellite"
+    ],
+    "description": "Tundra Orbit is a highly elliptical geosynchronous orbit with a 24-hour period, allowing a satellite to remain over a high-latitude region for most of its orbit. It is used for missile early warning systems and Arctic communications where GEO coverage is inadequate. The U.S. Space Force's SBIRS program and Russia's EKS (Tundra) constellation are the primary operational users of this orbit type."
+  },
+  {
+    "name": "Trans-Lunar Injection / Lunar Orbit",
+    "slug": "moon",
+    "abbreviation": "TLI",
+    "altitudeKm": "~384,400 km (Earth-Moon distance)",
+    "deltaVKms": 14.1,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Crewed lunar surface missions",
+      "Robotic lunar landers",
+      "Lunar resource prospecting",
+      "Cislunar infrastructure"
+    ],
+    "exampleMissions": [
+      "Artemis II crewed lunar flyby (targeted 2026)",
+      "Firefly Blue Ghost Mission 1 (landed Feb 2025)",
+      "Intuitive Machines IM-2 (landed March 2025)"
+    ],
+    "description": "Trans-Lunar Injection is the maneuver that sends a spacecraft from Earth orbit onto a trajectory toward the Moon, approximately 384,400 km away. The cislunar domain is highly active in 2026: NASA's Artemis program is building toward crewed lunar surface landings, while commercial landers from Firefly Aerospace and Intuitive Machines have demonstrated payload delivery under NASA's CLPS contracts. Lunar Gateway construction is planned to begin later this decade."
+  },
+  {
+    "name": "Earth-Sun Lagrange Points",
+    "slug": "lagrange-l1-l2",
+    "abbreviation": "L1/L2",
+    "altitudeKm": "~1,500,000 km from Earth",
+    "deltaVKms": 13.0,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Space telescope astronomy",
+      "Solar wind monitoring",
+      "Space weather early warning",
+      "Deep space relay"
+    ],
+    "exampleMissions": [
+      "James Webb Space Telescope (L2, operational)",
+      "ESA Euclid dark energy survey (L2, launched 2023)",
+      "DSCOVR solar wind monitor (L1)"
+    ],
+    "description": "The Earth-Sun Lagrange points L1 (between Earth and Sun) and L2 (beyond Earth from the Sun) are gravitational equilibrium points approximately 1.5 million km from Earth. L2 hosts the James Webb Space Telescope and ESA's Euclid observatory, making it the premier location for space-based astronomy. L1 is used for continuous solar monitoring and space weather early warning. NASA's Nancy Grace Roman Space Telescope is targeting an L2 launch in 2027."
+  },
+  {
+    "name": "Mars Transfer Orbit",
+    "slug": "mars",
+    "abbreviation": "MTO",
+    "altitudeKm": "54.6M–401M km (variable)",
+    "deltaVKms": 18.4,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Mars orbital science missions",
+      "Mars surface rovers and landers",
+      "Crewed Mars missions",
+      "Mars cargo pre-positioning"
+    ],
+    "exampleMissions": [
+      "NASA Perseverance rover (operational, Jezero Crater)",
+      "NASA Curiosity rover (operational, Gale Crater)",
+      "Next Mars transfer window: November 2026"
+    ],
+    "description": "Mars Transfer Orbit uses a Hohmann transfer trajectory from Earth to Mars, taking approximately 7–9 months depending on the launch window. Mars transfer windows open approximately every 26 months when orbital geometry is optimal — the next window opens in November 2026. Both NASA Perseverance and Curiosity rovers remain operational on the Martian surface. SpaceX's Starship architecture is the primary vehicle being developed for eventual crewed Mars missions."
+  },
+  {
+    "name": "Ceres Transfer Orbit",
+    "slug": "ceres",
+    "abbreviation": "Ceres",
+    "altitudeKm": "~414,000,000 km from Earth (avg)",
+    "deltaVKms": 19.7,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Dwarf planet science",
+      "Asteroid belt resource assessment",
+      "Water ice prospecting",
+      "Outer solar system staging"
+    ],
+    "exampleMissions": [
+      "NASA Dawn mission (orbited Ceres 2015–2018)",
+      "Future asteroid belt prospecting mission concepts",
+      "AstroForge and emerging in-situ resource utilization studies"
+    ],
+    "description": "Ceres, the largest object in the asteroid belt, is a target for future resource utilization due to its significant water ice deposits. NASA's Dawn mission orbited Ceres from 2015–2018, revealing bright sodium carbonate deposits and evidence of ongoing subsurface brine activity. No follow-on mission is currently funded, but commercial asteroid mining companies are evaluating Ceres and nearby bodies as long-term resource targets."
+  },
+  {
+    "name": "Europa (Jupiter) Transfer Orbit",
+    "slug": "europa",
+    "abbreviation": "Europa",
+    "altitudeKm": "~628,000,000 km from Earth (avg)",
+    "deltaVKms": 16.0,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Habitability science",
+      "Subsurface ocean characterization",
+      "Astrobiology research",
+      "Outer planet gravity-assist flyby"
+    ],
+    "exampleMissions": [
+      "NASA Europa Clipper (launched Oct 2024, arrives 2030)",
+      "ESA JUICE Jupiter Icy Moons Explorer (en route, arrives 2031)",
+      "Galileo Jupiter orbiter (historical, 1995–2003)"
+    ],
+    "description": "Europa, a moon of Jupiter, harbors a global subsurface ocean beneath its icy crust and is considered one of the most promising locations for extraterrestrial life in the solar system. NASA's Europa Clipper, launched in October 2024, is currently en route and will conduct approximately 50 close flybys of Europa starting in 2030 to characterize its ice shell, ocean depth, and habitability. ESA's JUICE mission will also study Europa during its broader Jupiter system tour."
+  },
+  {
+    "name": "Enceladus (Saturn) Transfer Orbit",
+    "slug": "enceladus",
+    "abbreviation": "Enceladus",
+    "altitudeKm": "~1,200,000,000 km from Earth (avg)",
+    "deltaVKms": 23.0,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Ocean world characterization",
+      "Plume sample collection",
+      "Astrobiology research",
+      "Outer solar system science"
+    ],
+    "exampleMissions": [
+      "Cassini-Huygens Saturn mission (historical, 2004–2017)",
+      "Proposed Enceladus Orbilander (2023 Decadal Survey priority)",
+      "No active mission — next opportunity requires new funding"
+    ],
+    "description": "Enceladus, Saturn's sixth-largest moon, actively vents water vapor and organic compounds from its subsurface ocean through geysers at its south pole — making it one of the highest-priority astrobiology targets. The Cassini spacecraft sampled these plumes directly, detecting hydrogen and organic molecules consistent with hydrothermal activity. The proposed Enceladus Orbilander mission, ranked a high priority in NASA's 2023–2032 Planetary Science Decadal Survey, would collect and analyze plume samples in detail, but no mission has been formally selected as of 2026."
+  },
+  {
+    "name": "Titan (Saturn) Transfer Orbit",
+    "slug": "titan",
+    "abbreviation": "Titan",
+    "altitudeKm": "~1,200,000,000 km from Earth (avg)",
+    "deltaVKms": 22.5,
+    "category": "Deep Space",
+    "typicalUseCases": [
+      "Atmospheric chemistry science",
+      "Prebiotic chemistry research",
+      "Hydrocarbon lake exploration",
+      "Rotorcraft mobility demonstrations"
+    ],
+    "exampleMissions": [
+      "NASA Dragonfly rotorcraft lander (in development, launch 2028)",
+      "Cassini-Huygens Titan flybys (historical)",
+      "ESA Huygens Titan surface probe (historical, 2005)"
+    ],
+    "description": "Titan is Saturn's largest moon and the only moon in the solar system with a dense atmosphere and surface liquids — lakes and seas of liquid methane and ethane. NASA's Dragonfly rotorcraft lander, currently in development and targeting a 2028 launch, will fly between scientific sites on Titan's surface to study prebiotic chemistry and assess habitability. Dragonfly is expected to arrive at Titan in 2034 after a gravity-assist trajectory through the inner solar system."
+  }
+]

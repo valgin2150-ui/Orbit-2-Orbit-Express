@@ -1,0 +1,1136 @@
+[
+  {
+    "slug": "the-rocket-factory-rebuilt-from-scratch",
+    "title": "The Rocket Factory Is Being Rebuilt From Scratch",
+    "subtitle": "AI-driven design, orbital manufacturing, and in-space construction are dismantling traditional rocket production simultaneously — from three directions, at three different stages of maturity.",
+    "summary": "Traditional rocket manufacturing — design over years, test, fail, redesign, repeat — is being dismantled simultaneously from three directions. AI closes the design loop in weeks instead of years. Metal 3D printers build flight-ready engines in days. And orbital manufacturing is moving from demonstration to clinical pipeline. Each layer is at a different stage of maturity. Each has a different investment profile. None is fully priced.",
+    "category": "Manufacturing",
+    "date": "2026-07-21",
+    "readTime": "8 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-31-july-21",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The way rockets, space hardware, and advanced materials get built is being reinvented across three layers simultaneously — AI-driven design, orbital manufacturing, and in-space construction. This is not a future capability. It is running in production facilities today."
+      },
+      {
+        "type": "heading",
+        "content": "THE ROCKET FACTORY IS BEING REBUILT FROM SCRATCH"
+      },
+      {
+        "type": "paragraph",
+        "content": "Traditional rocket manufacturing is a slow, expensive, iterative process — design over years, test, fail, redesign, repeat, at a cost that has historically made the barrier to entry prohibitive. That model is being dismantled simultaneously from three directions. Each layer is at a different stage of maturity. Each has a different investment profile. None is fully priced."
+      },
+      {
+        "type": "heading",
+        "content": "LAYER 1 — DESIGN AND PRINT: AI CLOSES THE LOOP"
+      },
+      {
+        "type": "paragraph",
+        "content": "The new way to build a rocket engine: an AI model encodes the physics and generates a complete, production-ready design in minutes. A metal 3D printer builds it in days. The iteration loop that used to cost years and hundreds of millions now takes weeks. Rocket Lab prints a flight-ready Rutherford engine every few days at its dedicated Long Beach AM facility. Stoke Space ordered five Additive Industries MetalFab 420K printers in November 2025 for production-scale manufacturing of its Nova reusable rocket."
+      },
+      {
+        "type": "paragraph",
+        "content": "SpaceX's Raptor 3 reflects the endpoint of this trend: nearly all external plumbing eliminated, cooling channels printed directly into the engine body as integrated monolithic components using GRCop-42, a copper alloy developed with NASA — hundreds of weld failure points removed from a single engine."
+      },
+      {
+        "type": "paragraph",
+        "content": "One geopolitical data point worth tracking: LegendSpace, a Beijing-based AI rocket engine startup founded in January 2026, raised $29.5 million in angel funding. Its Prime platform links AI-driven design, multi-physics simulation, additive manufacturing, and hot-fire testing into a closed loop it claims can compress engine iteration cycles to around two weeks. This is a competitive signal that this approach is now running inside the PRC space ecosystem."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: High-rate AM engine production is proven at the small-to-medium launch vehicle scale. Orbital-class thrust — the kind that powers heavy-lift rockets — requires solving turbomachinery sealing, material fatigue, and transient startup at a scale an order of magnitude larger. That milestone remains ahead. The companies that close that gap first will define the economics of the next decade of heavy lift."
+      }
+    ]
+  },
+  {
+    "slug": "the-launch-stack-being-rebuilt-from-top-down",
+    "title": "The Launch Stack Is Being Rebuilt From the Top Down",
+    "subtitle": "The Pentagon added an orbital transfer vehicle company as a national security prime contractor for the first time in NSSL history — four days before a NASA-backed cryogenic refueling demo rolled to the pad.",
+    "summary": "On July 7, the U.S. Space Force awarded Impulse Space and Relativity Federal positions on the NSSL Phase 3 Lane 1 contract, expanding the eligible provider pool to seven companies. Impulse Space — an orbital transfer vehicle developer, not a rocket manufacturer — became the first upper-stage company to hold prime contractor status in NSSL history. The Space Force is no longer just buying rides to orbit. It's buying delivery to destination.",
+    "category": "Defense",
+    "date": "2026-07-14",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-30-july-14",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The Pentagon rewired its launch program on July 7, adding an orbital transfer vehicle company as a national security prime contractor for the first time in NSSL history — and four days later, a NASA-backed cryogenic refueling demo rolled to the pad. The infrastructure layer of the next space economy is being assembled in real time."
+      },
+      {
+        "type": "heading",
+        "content": "THE LAUNCH STACK IS BEING REBUILT FROM THE TOP DOWN"
+      },
+      {
+        "type": "paragraph",
+        "content": "For two decades, the business of getting national security payloads to orbit looked like a duopoly. SpaceX and United Launch Alliance divided the missions, split the revenue, and absorbed most of the risk tolerance the Pentagon was willing to extend. The National Security Space Launch program was built around that reality: expensive, reliable, and deliberately limited to a short list of proven providers. That architecture has now formally ended."
+      },
+      {
+        "type": "paragraph",
+        "content": "On July 7, the U.S. Space Force awarded Impulse Space and Relativity Federal positions on the NSSL Phase 3 Lane 1 contract, a $5.6 billion indefinite-delivery vehicle that routes risk-tolerant national security launches to commercially capable providers. The additions expanded the eligible pool to seven companies — SpaceX, ULA, Blue Origin, Rocket Lab (NASDAQ: RKLB), Stoke Space, and the two newcomers — and the Space Force confirmed it intends to reopen the competition annually."
+      },
+      {
+        "type": "paragraph",
+        "content": "What makes the Impulse Space selection structurally significant isn't the company's name — it's the job description. Impulse is an orbital transfer vehicle developer, not a rocket manufacturer. Its Helios upper stage is designed to take payloads from low Earth orbit to geosynchronous orbit in under a day, riding partner medium-lift vehicles rather than building its own first stage. In the entire history of NSSL, prime contractors have been launch vehicle operators. Impulse Space is the first upper-stage company to hold that designation."
+      },
+      {
+        "type": "paragraph",
+        "content": "The Space Force is no longer just buying rides to orbit — it's buying delivery to destination. On July 11, a Rocket Lab Electron rocket lifted off carrying LOXSAT, a NASA-funded payload built by Eta Space to validate eleven cryogenic fluid management technologies over nine months in LEO: zero-loss liquid oxygen storage, propellant gauging in microgravity, automated tank pressure control, and transfer mechanics. These are the foundational building blocks of orbital refueling at scale."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Rocket Lab (RKLB) holds a dual position in this story — as a launch provider and as the vehicle that put the refueling demonstrator on orbit. The orbital transfer vehicle category is almost entirely private. The most direct public exposure to the infrastructure layer being built here runs through the defense primes and the handful of launch companies with public tickers."
+      }
+    ]
+  },
+  {
+    "slug": "the-thruster-race-in-space-propulsion-bottleneck",
+    "title": "The Thruster Race: How In-Space Propulsion Became the Space Economy's Next Bottleneck",
+    "subtitle": "Most satellite investors can name the rocket that gets a spacecraft to orbit. Almost none can name the thruster that keeps it there. That gap is closing fast.",
+    "summary": "Every satellite has two propulsion problems: how to get there and how to stay. The first problem — launch — has attracted billions in investment and several public companies. The second problem, maneuvering and station-keeping once on orbit, has been invisible to generalist investors. That is starting to change. Electric propulsion has become the standard for constellation station-keeping, and the supply chain behind it is tightening in ways the market hasn't priced.",
+    "category": "Propulsion",
+    "date": "2026-07-08",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-29-july-8",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Most satellite investors can name the rocket that gets a spacecraft to orbit — almost none can name the thruster that keeps it there. That gap is closing fast, and the money moving into in-space propulsion is worth understanding before the market prices it in."
+      },
+      {
+        "type": "heading",
+        "content": "THE THRUSTER RACE: HOW IN-SPACE PROPULSION BECAME THE SPACE ECONOMY'S NEXT BOTTLENECK"
+      },
+      {
+        "type": "paragraph",
+        "content": "Every satellite ever built has two propulsion problems: how to get there and how to stay. The first problem — launch — has attracted billions of investment dollars and several public companies. The second problem, maneuvering and station-keeping once on orbit, has mostly been invisible to generalist investors. That is starting to change."
+      },
+      {
+        "type": "paragraph",
+        "content": "CU Aerospace, a private company most people outside the satellite industry have never heard of, builds two thruster technologies with no equivalent in the catalog of names most space investors follow. The first is the Fiber-fed Pulsed Plasma Thruster — which runs on a spool of solid PTFE (essentially Teflon) and requires no pressurized tanks, no valves, no hazardous propellant handling. The second, Monofilament Vaporization Propulsion, heats the same class of solid polymer fiber to generate electrothermal thrust for orbital maneuvers. Both systems flew on CU Aerospace's DUPLEX CubeSat, deployed from the International Space Station in December 2025."
+      },
+      {
+        "type": "paragraph",
+        "content": "DARPA has selected CU Aerospace to develop an airbreathing thruster for very-low-Earth-orbit operations — a regime where conventional thrusters cannot function because there is barely enough atmosphere to poison them but enough to create drag. This is the frontier of in-space propulsion: no pressure vessels, solid inert propellant, scalable pulse-by-pulse precision, and multi-year mission life with no refueling."
+      },
+      {
+        "type": "paragraph",
+        "content": "Electric propulsion — primarily Hall thrusters and gridded ion drives — has become the standard for constellation station-keeping. Every one of SpaceX's roughly 7,000 Starlink satellites uses a krypton Hall thruster. OneWeb, Amazon Kuiper, and every new LEO constellation follows the same architecture. The supply chain behind Hall thruster propellant and the specialized magnets and ceramics inside the thrusters is tightening in ways the market hasn't yet priced into the component manufacturers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The investable story sits one tier up the power curve from the private developers. The public names with meaningful exposure to in-space propulsion are primarily the defense electronics and advanced materials companies supplying the magnet and ceramic components inside Hall thrusters — not the thruster integrators themselves, most of which remain private."
+      }
+    ]
+  },
+  {
+    "slug": "the-line-nobody-read-in-the-s1-starfall",
+    "title": "The Line Nobody Read in the S-1",
+    "subtitle": "SpaceX buried Starfall in its S-1 as a single bullet point. Two weeks after the IPO, it flew. The reentry market just got its most consequential entrant.",
+    "summary": "When SpaceX filed its S-1 in May, the financial press focused on Starlink's $4.4 billion operating income. Buried in the filing was a single bullet point referencing in-orbit manufacturing capabilities. On June 23 — eleven days after SPCX began trading — that bullet point flew. Starfall is SpaceX's uncrewed reentry capsule: 3.1 meters wide, 2,100 kilograms, carrying up to 1,000 kilograms of payload back from orbit. It was recovered in the Pacific roughly 48 hours after launch.",
+    "category": "SpaceX",
+    "date": "2026-06-30",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-28-june-30",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "SpaceX buried Starfall in its S-1 as a single bullet point. Two weeks after the IPO, it flew. The reentry market just got its most consequential entrant — and the investable picture is more nuanced than the headlines suggest."
+      },
+      {
+        "type": "heading",
+        "content": "THE LINE NOBODY READ IN THE S-1"
+      },
+      {
+        "type": "paragraph",
+        "content": "When SpaceX filed its S-1 in May, the financial press spent its energy on Starlink's $4.4 billion operating income, the Anthropic and Google compute contracts, and the $75 billion raise. Buried in the filing, almost as an afterthought, was a single bullet point referencing in-orbit manufacturing capabilities. On June 23 — eleven days after SPCX began trading — that bullet point flew."
+      },
+      {
+        "type": "paragraph",
+        "content": "Starfall is SpaceX's uncrewed reentry capsule: a flat disk, 3.1 meters wide, 0.75 meters tall, 2,100 kilograms, carrying up to 1,000 kilograms of payload back from orbit. It launched from Cape Canaveral at 6:53 a.m., was recovered in the Pacific, and was trucked through the Port of Long Beach by June 25 — roughly 48 hours from orbit to inspection."
+      },
+      {
+        "type": "paragraph",
+        "content": "The FAA's own FONSI/ROD states SpaceX's purpose directly: \"enable point-to-point delivery of critical cargo through space on rapid timelines\" and \"create a self-sustaining commercial in-space manufacturing market by offering access to microgravity and vacuum, loiter on orbit, and safe return from orbit as a service at scale.\" What the coverage missed is the military layer: SpaceX treated the launch like a classified mission — no upper stage broadcast, terse post-liftoff update, no disclosure on payload, duration, or recovery results."
+      },
+      {
+        "type": "paragraph",
+        "content": "That secrecy pattern has context. In 2022, the Air Force Research Laboratory awarded SpaceX a $102 million contract to demonstrate point-to-point cargo delivery globally via Starship. The Pentagon's REGAL program — Rocket Experimentation for Global Agile Logistics — has explicitly framed this capability as a pathway to a program of record, meaning recurring annual defense budget line items."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The investable picture has three layers. First, SPCX itself — Starfall adds a third revenue vector alongside Starlink and Colossus compute. Second, the reentry startup ecosystem: Varda Space Industries (Series C, $329M raised, six missions launched, five successful reentries), Inversion Space, Outpost, ATMOS Space Cargo, Reditus Space — all private. Third, the in-space manufacturing supply chain, where the public exposure is thin but growing. A confirmed defense contract for Starfall would be a material new disclosure."
+      }
+    ]
+  },
+  {
+    "slug": "organs-we-cant-print-on-earth",
+    "title": "The Organs We Can't Print on Earth",
+    "subtitle": "Gravity makes soft human tissue collapse before it can knit into an organ. Orbit removes that ceiling — and the companies turning that single fact into a product pipeline are split between a defense stock, a cash-strapped printer maker, and a wall of private firms you mostly can't touch.",
+    "summary": "More than 100,000 people sit on the U.S. transplant waiting list, and roughly thirteen die every day waiting for an organ that never comes. The bioprinting industry spent fifteen years trying to turn this from a supply problem into a manufacturing problem. Nobody has printed a functioning organ that works on Earth — because gravity collapses soft tissue before it can bond. In microgravity, cells don't sink. Redwire printed a human knee meniscus on the ISS in 2023. Auxilium Biotechnologies has an eighty-patient clinical trial underway for a microgravity-printed nerve-repair device.",
+    "category": "Biotech",
+    "date": "2026-06-23",
+    "readTime": "8 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-27-june-23",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Gravity makes soft human tissue collapse before it can knit into an organ. Orbit removes that ceiling — and the companies turning that single fact into a product pipeline are split between a defense stock, a cash-strapped printer maker, and a wall of private firms you mostly can't touch."
+      },
+      {
+        "type": "heading",
+        "content": "THE ORGANS WE CAN'T PRINT ON EARTH"
+      },
+      {
+        "type": "paragraph",
+        "content": "Start with a number that doesn't move: more than 100,000 people sit on the U.S. transplant waiting list, and roughly thirteen of them die every day waiting for an organ that never comes. The bioprinting industry spent fifteen years trying to refile this as a manufacturing problem: print a functioning organ from the patient's own cells, and the donor queue stops being the bottleneck. Nobody has printed one that works. And the reason is physics, not biology."
+      },
+      {
+        "type": "paragraph",
+        "content": "Living tissue is soft. Print a three-dimensional structure from cells suspended in a watery bio-ink and gravity drags the cells down before they bond, collapsing the structure into a puddle. The terrestrial workaround is scaffolding — rigid supports or thickeners stiff enough to hold a shape — but scaffolds get in the way of the soft, vessel-rich tissue a real organ requires. In microgravity, cells don't sink and soft structures don't collapse. You can print scaffold-free."
+      },
+      {
+        "type": "paragraph",
+        "content": "This stopped being theoretical in the last two years. Redwire used its BioFabrication Facility aboard the ISS to print a human knee meniscus on orbit in 2023, then a live human cardiac-tissue sample returned to Earth in 2024. A private San Diego firm, Auxilium Biotechnologies, printed a batch of implantable nerve-repair devices in microgravity in roughly two hours in late 2024, and has since opened an eighty-patient pivotal clinical trial for the terrestrial version."
+      },
+      {
+        "type": "paragraph",
+        "content": "That trial is the detail that separates this moment from the decade of demonstrations before it: a microgravity-printed device is no longer a photograph in a press release but the upstream end of a regulated clinical pathway with patients enrolled. NASA states it plainly — on Earth bioprinting needs a support structure; on the station, tissue holds three-dimensional shape without one."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The science is outrunning the investable surface beneath it. The most advanced work sits either inside large companies where bioprinting is a rounding error, or inside private firms with no public door. The pure-play public names a previous generation of investors remember have mostly dissolved, pivoted, or shrunk. The honest version: the unmet need is enormous and verifiable, the on-orbit progress is documented, and the clean ways to own a piece of it are very few. That gap is itself the signal."
+      }
+    ]
+  },
+  {
+    "slug": "the-week-the-lunar-economy-became-investable",
+    "title": "The Week the Lunar Economy Became Investable",
+    "subtitle": "The largest IPO in history closed the same week the first infrastructure-class lunar lander rolled out of its Pittsburgh cleanroom. For the first time, the capital and the hardware arrived in the same news cycle.",
+    "summary": "For years, space investors faced a timing problem. The thesis was obvious — launch costs falling, government demand rising, off-Earth infrastructure inevitable — but the addressable market kept receding just ahead of the capital. Last week, that changed. SpaceX priced at $135 per share, raised $85.7 billion, and began trading as SPCX. In the same week, Astrobotic's Griffin lander rolled out of its Pittsburgh cleanroom — the first infrastructure-class lunar lander built by a private company to reach that milestone.",
+    "category": "Investment",
+    "date": "2026-06-16",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-26-june-16",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The largest IPO in history closed the same week the first infrastructure-class lunar lander rolled out of its Pittsburgh cleanroom. For the first time, the capital and the hardware arrived in the same news cycle — and the investment map just got a lot more specific."
+      },
+      {
+        "type": "heading",
+        "content": "THE WEEK THE LUNAR ECONOMY BECAME INVESTABLE"
+      },
+      {
+        "type": "paragraph",
+        "content": "For years, space investors faced a timing problem. The thesis was obvious — launch costs falling, government demand rising, off-Earth infrastructure inevitable — but the addressable market kept receding just ahead of the capital. You could buy a satellite manufacturer or an Earth observation company, but the deeper lunar and cislunar economy lived in PowerPoint, not in portfolios. Last week, that changed in a single news cycle."
+      },
+      {
+        "type": "paragraph",
+        "content": "On Thursday, June 12, SpaceX (Nasdaq: SPCX) priced its IPO at $135 per share and began trading as a public company for the first time in its 24-year history. The stock opened at $150, closed its first session up 19.2% at $160.95, and continued climbing. By Monday, SPCX was trading above $177. Underwriters exercised the full greenshoe overallotment, bringing total capital raised to $85.7 billion — the largest IPO on record, more than double Saudi Aramco's $29.4 billion in 2019."
+      },
+      {
+        "type": "paragraph",
+        "content": "The number that matters most for SPCX investors isn't the opening price — it's what the S-1 reveals about where the money actually comes from. Starlink generated $11.4 billion in revenue in 2025 with $4.4 billion in operating income and an adjusted EBITDA margin of roughly 63%. The market is not pricing a rocket company. It is pricing satellite infrastructure with a rocket division and a two-decade runway."
+      },
+      {
+        "type": "paragraph",
+        "content": "The crack in the thesis is also in the S-1. Average revenue per Starlink subscriber fell from $99/month in 2023 to $66/month in Q1 2026, as SpaceX pushed into lower-income markets. Subscribers more than doubled; revenue per subscriber fell 33%. Investors who are long SPCX are making a specific bet: that Starship's commercial debut in the second half of 2026 unlocks a step-change in constellation economics before the ARPU compression becomes structurally damaging."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The first earnings report lands September 2, 2026 — the first hard price anchor for SPCX. Until then, volatility will be high: the float is limited because most shares remain with Musk and existing investors. The lunar lander milestone in the same week signals that the cislunar economy is moving from demonstration to hardware. The investment map is shifting from \"will this happen\" to \"who wins when it does.\""
+      }
+    ]
+  },
+  {
+    "slug": "china-controls-germanium-space-economy",
+    "title": "The Metal That Runs Through Everything — and China Controls 60%",
+    "subtitle": "AI data centers need optical fiber. Optical fiber needs germanium. China banned exports in December 2024. Here is what that means for every satellite manufacturer.",
+    "summary": "While the investment community watches the SpaceX IPO roadshow, the story that will actually shape costs for SpaceX, xAI, and every satellite manufacturer is playing out quietly in zinc smelters across China. Germanium — a byproduct of zinc refining with no viable substitute at production scale — is the dopant that gives optical fiber its ability to carry light over long distances. China controls approximately 60% of global germanium refining and banned exports to the United States in December 2024. Prices rose 200% between January 2024 and February 2026. At least one major US fiber manufacturer sold out inventory through year-end 2026.",
+    "category": "Supply Chain",
+    "date": "2026-06-09",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-25-june-9",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "While the investment community watches the SpaceX IPO roadshow, the stories worth taking a closer look at are the ones that will shape costs for SpaceX, xAI, and every satellite manufacturer for the next decade — quietly, downstream, and without a single press release announcing their arrival. One of them starts in a town of 947 people in Oklahoma."
+      },
+      {
+        "type": "heading",
+        "content": "THE METAL THAT RUNS THROUGH EVERYTHING — AND CHINA CONTROLS 60%"
+      },
+      {
+        "type": "paragraph",
+        "content": "Here is the chain of events. Follow it once and you will never look at the AI infrastructure buildout the same way. AI data centers require optical fiber. Optical fiber requires germanium — a dopant with no viable substitute at production scale that gives the glass its ability to carry light over long distances."
+      },
+      {
+        "type": "paragraph",
+        "content": "Germanium is not a metal you can mine directly. It comes out of zinc smelters as a byproduct, extracted from residue that most Western operators have historically discarded or stockpiled as waste. China recognized this decades ago and built the refining infrastructure to process it at scale. Today China controls approximately 60% of global germanium refining. In December 2024, Beijing banned germanium exports to the United States. Prices rose 200% between January 2024 and February 2026. At least one major US fiber manufacturer sold out its inventory through year-end 2026."
+      },
+      {
+        "type": "paragraph",
+        "content": "That is the chokepoint. Here is why it matters to you specifically."
+      },
+      {
+        "type": "paragraph",
+        "content": "Every Starlink terminal uses optical transceivers. Every ground station that connects a satellite constellation to the terrestrial internet backbone runs on fiber. The xAI Colossus data center in Memphis — and every data center like it being built to train and run AI models — depends on fiber connectivity at a scale that was not anticipated when procurement contracts were written. The supply chain disruption is already priced into fiber manufacturers. It is not yet priced into the satellite operators and AI infrastructure companies that depend on them."
+      },
+      {
+        "type": "paragraph",
+        "content": "The company in that Oklahoma town of 947 people is one of fewer than a dozen US facilities capable of processing germanium-bearing feedstock into usable product. Its capacity constraints are now a national security concern. The Defense Production Act has been invoked. None of this has produced a single new tonne of refined germanium yet."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The near-term winners are germanium recyclers and alternative feedstock processors. The medium-term winners are whoever controls the Oklahoma and Canadian zinc smelter residue streams that represent the only realistic Western production upside. The losers are any company with long-dated fiber procurement contracts written before the export ban — and the satellite operators that depend on their delivery schedules."
+      }
+    ]
+  },
+  {
+    "slug": "spacex-special-edition-june-4-2026",
+    "title": "Special Edition: The SpaceX S-1 Is Live — Here Is What the Numbers Actually Say",
+    "subtitle": "Starlink at $11.4B revenue. GAAP net loss of $4.9B. Musk controls 79% of votes. The roadshow begins today.",
+    "summary": "The SpaceX S-1 dropped this morning and the roadshow launches today. After two years of the most-anticipated IPO in history, the actual numbers are finally public. Starlink revenue came in at $11.4B. GAAP net loss of $4.9B — driven almost entirely by Starship development costs. Elon Musk controls 79% of voting power post-IPO. The offering is targeting a $2 trillion valuation at $75 billion raised. Here is a breakdown of what the S-1 actually reveals and what it means for investors at every entry point.",
+    "category": "SpaceX / IPO",
+    "date": "2026-06-04",
+    "readTime": "8 min",
+    "substackUrl": "https://orbitaleconomics.substack.com",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The SpaceX S-1 is live. The roadshow begins today, June 4, 2026. Pricing is set for June 11. First day of trading on the Nasdaq under ticker SPCX is targeted for June 12. After years of the most-anticipated IPO in modern market history, the actual numbers are finally public — and some of them are not what the headlines are saying."
+      },
+      {
+        "type": "heading",
+        "content": "WHAT THE S-1 ACTUALLY SAYS"
+      },
+      {
+        "type": "paragraph",
+        "content": "Starlink revenue: $11.4 billion. That is the number that matters. Starlink is approximately 69% of total SpaceX revenue, and it is the asset the public market is actually buying. The growth trajectory — from roughly $2B in 2022 to $11.4B — is the steepest revenue ramp of any hardware-dependent consumer service in history, including Netflix's first decade."
+      },
+      {
+        "type": "paragraph",
+        "content": "GAAP net loss: $4.9 billion. This is the number that will generate the most noise and the least useful analysis. The loss is driven almost entirely by Starship development — R&D that is expensed under GAAP but represents capital investment in what is effectively the world's only reusable super-heavy launch vehicle program. Strip out Starship development costs and the Starlink business is profitable at the operating level."
+      },
+      {
+        "type": "paragraph",
+        "content": "Voting control: Elon Musk controls 79% of voting power post-IPO through a dual-class share structure. The public offering represents economic exposure to SpaceX's cash flows without meaningful governance rights. This is not unusual for founder-led technology companies at IPO — but it is worth understanding before you allocate capital."
+      },
+      {
+        "type": "paragraph",
+        "content": "Valuation ask: $2 trillion at $75 billion raised. This prices Starlink at approximately 175x trailing revenue — a multiple that requires you to believe Starlink will be a $50-100B annual revenue business within a decade. The bull case is Direct-to-Cell, maritime, aviation, and enterprise government contracts layered on top of the existing consumer subscriber base. The bear case is that the total addressable market is smaller than the current ask implies."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The allocation question is more important than the valuation question for most individual investors. SpaceX has committed to allocating 30% of the offering to retail — at least three times the Wall Street standard. Fidelity, Schwab, and TD Ameritrade accounts are IPO-eligible. The waitlist filled in under 48 hours. If you do not already have an IPO-eligible brokerage account set up, the window for primary allocation is effectively closed."
+      }
+    ]
+  },
+  {
+    "slug": "valley-of-death-space-insurance",
+    "title": "The Valley of Death in Space Insurance — and Who's Filling It",
+    "subtitle": "The space insurance market absorbed a $995M loss against $557M in premiums in 2023. The fix is arriving from three directions at once.",
+    "summary": "For decades, space insurance operated as a gentlemen's market — a handful of Lloyd's syndicates, a few specialty underwriters, and a small pool of reinsurance capital covering a small number of high-value GEO satellites. 2023 broke that model: $995M in claims against $557M in premiums, a 179% loss ratio driven by two GEO satellite malfunctions each valued above $400M. Annual premium income still sits around $550-600M. But the infrastructure being built right now — a software startup that became a licensed broker, a Bermuda specialty insurer expanding its product suite, and the world's largest brokerage consolidating under a single brand — will determine who captures the premium volume when mandatory LEO coverage arrives.",
+    "category": "Insurance & Finance",
+    "date": "2026-06-02",
+    "readTime": "8 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-23-june-2",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The space insurance market absorbed a $995M loss year in 2023 — nearly double the roughly $557M in premiums collected that year — and the structural fix is now coming from three directions at once: a software startup that became a licensed broker, a Bermuda specialty insurer expanding its product suite, and the world's largest brokerage consolidating under a single brand. Annual premium income in this market still sits around $550-600M (the broader insurance value chain is measured in the billions), so the infrastructure being built right now will determine who captures the premium volume when mandatory LEO coverage arrives."
+      },
+      {
+        "type": "heading",
+        "content": "THE VALLEY OF DEATH IN SPACE INSURANCE — AND WHO'S FILLING IT"
+      },
+      {
+        "type": "paragraph",
+        "content": "For decades, space insurance operated as a gentlemen's market. A handful of Lloyd's syndicates, a few specialty underwriters, and a small pool of reinsurance capital covered a small number of high-value GEO satellites. The economics worked because the assets were large, the clients were few, and the underwriting was manual. Then the rocket equation changed."
+      },
+      {
+        "type": "paragraph",
+        "content": "The commercial LEO explosion broke that model in two directions simultaneously. On the loss side, 2023 became the worst year in over two decades: total claim payouts reached approximately $995 million against $557 million in premiums collected — a loss ratio of nearly 179% — driven largely by a pair of GEO satellite malfunctions each valued above $400 million. On the demand side, the same period saw LEO satellite deployments accelerate beyond anything the traditional market was designed to cover. The result is a market that has seen its worst loss year on record and its largest structural growth opportunity at exactly the same time."
+      },
+      {
+        "type": "paragraph",
+        "content": "The traditional Lloyd's model underwrites individual, high-value satellites with bespoke policies negotiated over months. That model does not scale to constellations of 100, 1,000, or 10,000 satellites. It cannot process the actuarial data from a Starlink or OneWeb deployment in the time required to write coverage. The underwriters who will capture the next decade of premium growth are the ones building parametric, data-driven products that can be priced and issued at scale."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The total addressable market for space insurance is currently $550-600M in annual premium. Industry projections put that number at $3-5B within a decade as LEO constellations scale and regulatory frameworks in the US, EU, and UK move toward mandatory third-party liability coverage. The companies positioning themselves as the infrastructure layer — brokers, data providers, parametric underwriters — are more interesting than the incumbent syndicates at this stage of the market cycle."
+      }
+    ]
+  },
+  {
+    "slug": "pharma-company-paying-drugs-in-space",
+    "title": "A Pharma Company Is Now Paying to Make Drugs in Space",
+    "subtitle": "United Therapeutics is paying Varda Space Industries to fly its drugs to orbit. Here is why microgravity manufacturing just became a commercial line item.",
+    "summary": "For two decades, the case for manufacturing in orbit lived almost entirely inside government-funded experiments on the ISS. Companies flew samples, published results, and went home. Nobody was buying a product. That changed this month. United Therapeutics — a Nasdaq-listed maker of treatments for pulmonary arterial hypertension, run by Martine Rothblatt — confirmed it is paying Varda Space Industries to fly its drugs to orbit and search for new crystal forms. The mechanism is genuinely strange and useful: in microgravity, molecules can crystallize into arrangements that are impossible on Earth, changing how a drug dissolves, how long it stores, and how it can be administered.",
+    "category": "Manufacturing",
+    "date": "2026-05-26",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-22-may-26",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "For two decades, the case for manufacturing in orbit lived almost entirely inside government-funded experiments on the International Space Station. Companies flew samples, published interesting results, and went home. Nobody was buying a product. The science was real, but the business was a slideshow."
+      },
+      {
+        "type": "heading",
+        "content": "A PHARMA COMPANY IS NOW PAYING TO MAKE DRUGS IN SPACE"
+      },
+      {
+        "type": "paragraph",
+        "content": "That changed this month. United Therapeutics — a Nasdaq-listed maker of treatments for pulmonary arterial hypertension, run by Martine Rothblatt, a satellite industry veteran — confirmed it is paying Varda Space Industries to fly its drugs to orbit and search for new crystal forms. The mechanism is genuinely strange and useful: on Earth, gravity drives convection and sedimentation, forces that distort how a molecule assembles into a solid. Remove gravity and the same drug can crystallize into arrangements — polymorphs — that are purer, more uniform, or simply impossible to make on the ground."
+      },
+      {
+        "type": "paragraph",
+        "content": "A different crystal form can dissolve differently, store longer, or work as an IV drip instead of an inhaler. For a drugmaker, that is how you extend a franchise and keep imitators at bay for another decade. United Therapeutics' pulmonary arterial hypertension franchise generates over $2B annually. Even a marginal improvement in bioavailability or shelf life — if it qualifies as a new formulation under FDA rules — resets the patent clock."
+      },
+      {
+        "type": "paragraph",
+        "content": "Varda's business model is the key enabler. The company builds small satellite-based manufacturing platforms — essentially drug factories in a reentry capsule — that go up on a Rocket Lab Electron, spend weeks in microgravity processing a client's materials, and return the product to Earth. The client never needs to understand orbital mechanics. They hand over a compound, Varda handles the mission, and a capsule lands in the Utah desert with a crystallized product inside."
+      },
+      {
+        "type": "paragraph",
+        "content": "This is the first confirmed commercial transaction in the space manufacturing sector where a company with no space expertise is paying for orbital processing as a line item in its R&D budget. It is not a grant. It is not a government contract. It is a purchase order."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Varda is the most interesting pure-play in orbital manufacturing right now. The United Therapeutics deal validates the revenue model — a contract manufacturing organization in orbit that services any industry whose molecules behave differently without gravity. Pharmaceuticals are the beachhead. Semiconductors, fiber optic preforms, and protein crystals for structural biology are the expansion markets. Watch for the Series C announcement."
+      }
+    ]
+  },
+  {
+    "slug": "spacex-numbers-leaking-before-s1",
+    "title": "SpaceX Numbers Are Leaking — Here's What We Know Before the S-1 Drops",
+    "subtitle": "Starlink at $11.4B. GAAP net loss of $4.9B. Musk controls 79% of votes. Here is what the leaked figures mean before the prospectus is official.",
+    "summary": "The SpaceX S-1 has not dropped yet, but the numbers are leaking. Multiple sources citing the prospectus in circulation among institutional investors put Starlink revenue at $11.4B, total GAAP net loss at $4.9B — driven by Starship development costs — and Musk's post-IPO voting control at 79%. The roadshow launches June 4. Pricing is set for June 11. First day of trading targets June 12 on the Nasdaq under SPCX. Here is what to make of the numbers before they are official.",
+    "category": "SpaceX / IPO",
+    "date": "2026-05-20",
+    "readTime": "5 min",
+    "substackUrl": "https://orbitaleconomics.substack.com",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The SpaceX S-1 has not been filed yet, but the numbers are in circulation among institutional investors and they are leaking. Here is what multiple sources are reporting ahead of the official prospectus."
+      },
+      {
+        "type": "heading",
+        "content": "WHAT THE LEAKED NUMBERS SAY"
+      },
+      {
+        "type": "paragraph",
+        "content": "Starlink revenue: $11.4 billion. This is the core number. Starlink represents approximately 69% of total SpaceX revenue and is the primary asset the public market will be purchasing. The satellite business — not the launch business — is the investment thesis."
+      },
+      {
+        "type": "paragraph",
+        "content": "GAAP net loss: $4.9 billion. This figure will generate enormous noise and almost no useful analysis. The loss is a function of how SpaceX accounts for Starship development under US GAAP — expensing as R&D what is effectively capital investment in the only reusable super-heavy launch vehicle program on Earth. The Starlink business itself is operationally profitable."
+      },
+      {
+        "type": "paragraph",
+        "content": "Voting control: Elon Musk controls 79% of voting power post-IPO through a dual-class share structure. Public shareholders own economic exposure to SpaceX's cash flows without meaningful governance rights. This is structurally identical to how Alphabet, Meta, and Snap went public."
+      },
+      {
+        "type": "paragraph",
+        "content": "Timeline: The roadshow launches June 4. Pricing is expected June 11. First day of trading is targeted for June 12, 2026, on the Nasdaq under ticker SPCX. The company is targeting a $2 trillion valuation on $75 billion raised — the largest IPO in history by a factor of more than two."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The allocation window for retail investors is opening now. SpaceX has committed to allocating 30% of the offering to retail participants — at least three times the industry standard. Fidelity, Schwab, and TD Ameritrade are the primary access points. The IPO-eligible account waitlists are filling rapidly. If you want primary allocation, the setup needs to happen today, not the week of pricing."
+      }
+    ]
+  },
+  {
+    "slug": "spacex-ipo-window-math-honest-truth",
+    "title": "The SpaceX IPO: The Window, the Math, and the Honest Truth",
+    "subtitle": "The largest IPO in history is 24 days away. Here is how to position at every capital level — and five public stocks already pricing in the halo.",
+    "summary": "SpaceX is targeting June 12, 2026 as its first day of trading on the Nasdaq under ticker SPCX. Pricing is expected June 11. The investor roadshow launches June 4. The public prospectus — the document that will reveal Starlink's actual revenue numbers for the first time — is expected to drop as early as May 20. SpaceX is targeting a $2 trillion valuation on a $75 billion raise. Saudi Aramco held the previous IPO record at $29.4 billion. SpaceX is targeting more than twice that. At $2 trillion, it would rank among the six most valuable publicly traded companies on the planet. The most common question in the Orbital Economics inbox for two years has been some version of: how do I get into SpaceX?",
+    "category": "SpaceX / IPO",
+    "date": "2026-05-19",
+    "readTime": "10 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-21-may-19",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The largest IPO in history is 24 days away — here is how to position at every capital level, and five public stocks already pricing in the halo."
+      },
+      {
+        "type": "heading",
+        "content": "THE SPACEX IPO: THE WINDOW, THE MATH, AND THE HONEST TRUTH"
+      },
+      {
+        "type": "paragraph",
+        "content": "For two years, the most common question in the Orbital Economics inbox has been some version of: how do I get into SpaceX? That question now has a hard deadline. SpaceX is targeting June 12, 2026, as its first day of trading on the Nasdaq under ticker SPCX. Pricing is expected June 11. The investor roadshow launches June 4. And the public prospectus — the document that will reveal Starlink's actual revenue numbers for the first time — is expected to drop as early as this Wednesday, May 20."
+      },
+      {
+        "type": "paragraph",
+        "content": "The scale of what is happening is genuinely hard to frame. SpaceX is targeting a $2 trillion valuation on a $75 billion raise. Saudi Aramco held the previous IPO record at $29.4 billion raised. SpaceX is targeting more than twice that. At $2 trillion, it would rank among the six most valuable publicly traded companies on the planet — just below Amazon. At roughly 125 times current revenue, it is pricing in a decade of perfect execution: Starlink growth, Starship commercialization, and the orbital AI computing thesis Elon Musk has been building toward since the xAI merger closed in February."
+      },
+      {
+        "type": "paragraph",
+        "content": "One detail stands out for individual investors: SpaceX has reportedly committed to allocating 30% of the offering to retail investors — at least three times the Wall Street standard. Even so, demand is expected to massively exceed supply. Getting an allocation through your brokerage will require having an IPO-eligible account set up in advance. Fidelity, Schwab, and TD Ameritrade are the primary access points — the accounts need to be established now."
+      },
+      {
+        "type": "heading",
+        "content": "THE FIVE PUBLIC STOCKS PRICING IN THE HALO"
+      },
+      {
+        "type": "paragraph",
+        "content": "If primary allocation is unavailable, the next question is which public companies move in SpaceX's wake. Five names stand out: Rocket Lab (RKLB) as the clearest beneficiary of renewed investor appetite for pure-play space companies; Planet Labs (PL) as the EO data infrastructure play; Iridium (IRDM) as the LEO communications comparison; Redwire (RDW) as the in-space manufacturing exposure; and Intuitive Machines (LUNR) as the lunar surface logistics proxy."
+      },
+      {
+        "type": "paragraph",
+        "content": "The honest truth: at 125x revenue, the SpaceX valuation is not a traditional investment analysis. It is a bet on the decade-long trajectory of the space economy — that Starlink becomes the default connectivity layer for aviation, maritime, enterprise, and direct-to-cell mobile; that Starship brings launch costs below $100/kg and opens markets that do not yet exist; and that the orbital AI computing thesis Musk has been articulating becomes a real revenue stream within five years. If you believe those things, the price is not the issue. If you do not, no multiple justifies the entry."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The IPO will be the single most-covered financial event of 2026. The halo effect on public space companies will be real but temporary. The more durable opportunity is in the supply chain plays — the companies building the infrastructure that SpaceX, xAI, and every constellation operator will need regardless of whether the IPO prices at $2T or $1.5T."
+      }
+    ]
+  },
+  {
+    "slug": "golden-dome-supply-chain-beyond-obvious",
+    "title": "The Golden Dome Supply Chain: Beyond the Obvious Names",
+    "subtitle": "RTX, LMT, NOC are the right names. They are also the fully-priced names. Here is where capital can still move ahead of the market.",
+    "summary": "Twenty posts in, the investment thesis at the center of this newsletter — that space infrastructure is the defining capital allocation story of this decade — just received its largest single policy validation. Golden Dome is not just a defense program. It is a $185 billion procurement cycle with 2,440 approved vendors and a four-year deadline. The primes are obvious. Here are the plays nobody is talking about: the five constraint sub-tiers that an independent AIA/PwC study identified as Golden Dome's most likely schedule bottlenecks — optical inter-satellite link terminals, radiation-hardened electronics, EO/IR sensors, solid rocket motors, and GaN RF components.",
+    "category": "Defense & Capital",
+    "date": "2026-05-12",
+    "readTime": "9 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-20-may-12",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Twenty posts in, the investment thesis at the center of this newsletter — that space infrastructure is the defining capital allocation story of this decade — just received its largest single policy validation."
+      },
+      {
+        "type": "heading",
+        "content": "THE GOLDEN DOME SUPPLY CHAIN: BEYOND THE OBVIOUS NAMES"
+      },
+      {
+        "type": "paragraph",
+        "content": "RTX, LMT, NOC. If you have read any coverage of Golden Dome this week, you have seen those three tickers in every headline. They are the right names. They are also the fully-priced names. The more interesting question is where capital can still move ahead of the market — in the supply chain tiers that have to scale whether or not any single prime wins the next contract."
+      },
+      {
+        "type": "paragraph",
+        "content": "An independent AIA/PwC study from March 2026 identified five component sub-tiers as Golden Dome's most likely schedule constraints: optical inter-satellite link terminals, radiation-hardened electronics, EO/IR sensors, solid rocket motors, and GaN RF components. Two of these already have documented production capacity gaps. Programs like this don't stall because a prime fails a design review. They stall because a program is three tiers below ran out of a specific grade of gallium nitride substrate."
+      },
+      {
+        "type": "paragraph",
+        "content": "Golden Dome is not just a defense program. It is a $185 billion procurement cycle with 2,440 approved vendors and a four-year deadline. The program architecture requires a proliferated LEO constellation for midcourse tracking — satellites that need optical ISL terminals to communicate with each other without routing through ground stations. Current US production capacity for space-qualified optical ISL terminals is a fraction of what the program requires. The companies that can scale that capacity are not household names."
+      },
+      {
+        "type": "paragraph",
+        "content": "The radiation-hardened electronics constraint is equally acute. Rad-hard processors, memory, and power management ICs are produced by a small number of qualified fabs — primarily Microchip Technology, BAE Systems, and a handful of European suppliers. Golden Dome's sensor layer requires rad-hard components in quantities that current qualified production lines cannot deliver on a four-year timeline without significant capacity expansion."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: The obvious primes — RTX, LMT, NOC, L3Harris — are priced for Golden Dome. The supply chain plays are not. Look at the second and third-tier suppliers in optical ISL, rad-hard semiconductors, and GaN RF. These companies will see demand that their current market caps do not reflect. The constraint is not capital — it is qualified production capacity, and that takes time to build. The window to get positioned ahead of that realization is the next 90 days."
+      }
+    ]
+  },
+  {
+    "slug": "when-the-sky-became-the-front-line",
+    "title": "When the Sky Became the Front Line",
+    "subtitle": "Operation Epic Fury battle-tested commercial EO satellites in real-time warfare. Capital is now repricing the entire sector.",
+    "summary": "Israeli officials described Operation Roaring Lion as the first conflict in history where commercial satellites played a decisive role from start to finish. SAR satellites from ICEYE and Umbra delivered 24/7 visibility through dust and smoke. The battle-testing that defense agencies once required over years happened in a single week. This post maps how capital is repricing the EO stack \u2014 from SkyFi\u2019s asset-light marketplace to Northwood\u2019s ground infrastructure, plus Planet Labs\u2019 SHIELD prime contract and SpaceX\u2019s IPO timeline.",
+    "category": "Defense & Capital",
+    "date": "2026-03-10",
+    "readTime": "12 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-11-when-the",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Israeli officials described Operation Roaring Lion as the first conflict in history where commercial satellites played a decisive role from start to finish. The US-Israeli strikes that began February 28 \u2014 codenamed Operation Epic Fury by CENTCOM \u2014 turned commercial Earth observation into live wartime infrastructure. SAR satellites from companies like ICEYE and Umbra delivered 24/7 visibility through dust and smoke. The battle-testing that defense agencies once required over years happened in a single week. Capital that was already moving toward this sector just got a very loud green light."
+      },
+      {
+        "type": "heading",
+        "content": "Lead Story: SkyFi \u2014 Series A, $12.7M, January 2026"
+      },
+      {
+        "type": "paragraph",
+        "content": "SkyFi does not own a single satellite. It built the marketplace where anyone \u2014 a government analyst, an insurance underwriter, a hedge fund, a Reuters photo editor \u2014 can order high-resolution Earth imagery on demand, in minutes, with no annual contract required. The platform aggregates over 50 providers including Vantor, Planet Labs, ICEYE, Umbra, Satellogic, and Airbus Pl\u00e9iades Neo. Pick a location, select a provider and resolution, and imagery arrives \u2014 including direct delivery to AWS S3 for enterprise workflows."
+      },
+      {
+        "type": "paragraph",
+        "content": "The Iran conflict put SkyFi in front of the world without a marketing dollar spent. OSINT analyst Brady Africk used the platform to publish annotated Satellogic imagery of the compound where the supreme leader was killed \u2014 shared globally within hours of capture. Vantor imagery of Natanz and Konarak Naval Base ran simultaneously on CNN, NPR, the New York Times, and Reuters. CEO Luke Fischer said the bottleneck is not getting imagery; it is getting answers. The company\u2019s next build is AI-driven analytics that deliver intelligence, not pixels."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Asset-light model with strong gross margin potential at scale. The March 2026 conflict is the most powerful unplanned product demonstration in the company\u2019s history. Defense and intelligence contract pipeline opened dramatically in one week. Series B likely late 2026 \u2014 watch for it."
+      },
+      {
+        "type": "heading",
+        "content": "Planet Labs (NYSE: PL) \u2014 SHIELD Prime Contract"
+      },
+      {
+        "type": "paragraph",
+        "content": "Planet operates the world\u2019s largest Earth observation constellation, and its imagery defined global understanding of the Iran strikes. On March 3rd the company was named a prime contractor under the Missile Defense Agency\u2019s SHIELD IDIQ \u2014 a vehicle with up to a $151 billion ceiling shared across multiple primes. Planet\u2019s backlog grew 216% year-over-year to $734M, with approximately 27% full-year revenue growth guidance for fiscal 2026. Next-generation Pelican satellites carry Nvidia Jetson AI chips for onboard processing."
+      },
+      {
+        "type": "heading",
+        "content": "Northwood Space \u2014 Series B, $100M, January 2026"
+      },
+      {
+        "type": "paragraph",
+        "content": "Every satellite in orbit needs to talk to Earth, and Northwood builds the modern ground infrastructure that makes that possible. The Series B was led by Washington Harbour Partners and co-led by Andreessen Horowitz. Northwood secured a $49.8M Space Force contract to modernize the Satellite Control Network \u2014 replacing 1970s-era dishes with phased-array Portals that handle classified government space missions. Targeting deployment across five continents by end of 2026."
+      },
+      {
+        "type": "heading",
+        "content": "Orbitworks \u2014 Abu Dhabi\u2019s First Satellite Factory"
+      },
+      {
+        "type": "paragraph",
+        "content": "The Middle East\u2019s first private satellite manufacturing facility is now operational in Abu Dhabi \u2014 a joint venture between Marlan Space (backed by International Holding Company) and US-based Loft Orbital. Initial investment exceeds $100M, targeting production of up to 50 satellites per year at 500kg class. The Gulf states just watched commercial satellites document Iranian strikes on their neighbors in real time. Sovereign EO demand in the region will not decrease."
+      },
+      {
+        "type": "heading",
+        "content": "Vantor \u2014 From Maxar to War\u2019s Most-Published Imagery"
+      },
+      {
+        "type": "paragraph",
+        "content": "Vantor\u2019s 0.3-meter optical satellites produced imagery of Khamenei\u2019s compound, the Natanz enrichment facility, Konarak Naval Base, and Tehran Air Force Command headquarters \u2014 published by CBS, NPR, CNN, and Reuters simultaneously. Vantor emerged from Advent International\u2019s 2023 acquisition of Maxar Technologies, rebranded in October 2025 alongside manufacturing spinout Lanteris. The company distributes commercially through SkyFi\u2019s platform and fuses satellite data with air and ground sensor networks as a unified spatial intelligence system."
+      },
+      {
+        "type": "heading",
+        "content": "SpaceX \u2014 IPO Watch"
+      },
+      {
+        "type": "paragraph",
+        "content": "Elon Musk confirmed in December 2025 that a SpaceX IPO is planned for 2026. In February 2026, SpaceX formally acquired xAI in an all-stock deal, combining Starlink broadband, Grok AI, and SpaceX\u2019s launch infrastructure at a combined private valuation of approximately $1.25 trillion. Multiple financial outlets cite mid-2026 as the most likely window, at a target valuation of $1.5 trillion. Starlink reached 9.2 million subscribers at end-2025, roughly 69% of SpaceX revenue. No S-1 has been filed. Wait for the filing."
+      }
+    ]
+  },
+  {
+    "slug": "he3-lunar-psr-research-brief",
+    "title": "He\u00B3 in Lunar Permanently Shadowed Regions: Concentrations, Mechanisms, and Resource Implications",
+    "subtitle": "A literature synthesis on Helium-3 cold-trapping in polar craters and what it means for ISRU planning",
+    "summary": "Permanently shadowed regions at the lunar poles may contain He\u00B3 concentrations 3\u201310x higher than sunlit mare soil. This working paper synthesizes the primary research \u2014 from Cocks (2010) PSR estimates to NASA's own 2021 engineering baseline \u2014 and evaluates what the data actually supports for mission architecture and extraction planning.",
+    "category": "Working Paper",
+    "date": "2026-02-26",
+    "readTime": "14 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/he3-lunar-psr-research-brief",
+    "author": "Vlad Algin",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Scope Note: This document is a synthesis and review of publicly available scientific literature on He\u00B3 concentrations in lunar permanently shadowed regions (PSRs). It does not present original experimental data. All findings are attributed to their primary sources with verified citations. The author's contribution is the selection, analysis, cross-verification, and synthesis of the material presented."
+      },
+      {
+        "type": "heading",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "Permanently shadowed regions (PSRs) \u2014 polar craters that never receive direct sunlight \u2014 are theorized to contain significantly elevated concentrations of Helium-3 (He\u00B3) compared to sunlit lunar surfaces. In sunlit areas, measured He\u00B3 concentrations in Apollo and Luna sample returns range from 1.4 to 15 ppb, with higher values found in titanium-rich mare regions. In PSRs, cryogenic temperatures are estimated to enable concentrations of up to 50 ppb or more. Crucially, the PSR estimate is a theoretical projection \u2014 no in-situ measurement has been made."
+      },
+      {
+        "type": "heading",
+        "content": "Mechanisms of Concentration"
+      },
+      {
+        "type": "paragraph",
+        "content": "Research distinguishes two populations of He\u00B3 in the regolith. Strongly bound helium is implanted by the solar wind into crystal lattice vacancies of minerals \u2014 primarily ilmenite (FeTiO\u2083), which has a high concentration of radiation-induced defects that effectively trap solar wind ions. This component has a high activation energy and requires heating to approximately 700\u00B0C for full release."
+      },
+      {
+        "type": "paragraph",
+        "content": "Weakly bound (inter-grained) helium sits between mineral grains. This component is highly temperature-sensitive: diurnal heating in sunlit regions causes this weakly bound He\u00B3 to desorb and escape to the exosphere. Studies confirm that the spatial variability of He\u00B3 retention is strongly controlled by surface temperature."
+      },
+      {
+        "type": "heading",
+        "content": "Thermal Retention in PSRs"
+      },
+      {
+        "type": "paragraph",
+        "content": "PSRs are the coldest places in the solar system. NASA's Lunar Reconnaissance Orbiter (LRO) Diviner instrument recorded surface temperatures as low as 20 K in south polar craters, with a general PSR temperature range of approximately 20\u201370 K. (Note: 110 K is the threshold temperature at which PSRs are generally defined as cold traps for water ice stability; actual crater floor temperatures are substantially colder.) These cryogenic conditions prevent the thermal desorption of weakly bound He\u00B3, enabling accumulation over geological time."
+      },
+      {
+        "type": "heading",
+        "content": "Migration and Cold-Trapping Hypothesis"
+      },
+      {
+        "type": "paragraph",
+        "content": "It is hypothesized that He\u00B3 atoms liberated from warmer sunlit regolith can migrate ballistically across the lunar surface and become cold-trapped upon entering a PSR \u2014 analogous to the mechanism by which water ice accumulates in these craters. This migration-and-trapping model is consistent with the broader volatile cold-trap literature but, like the elevated concentration estimates themselves, awaits direct ground-truth verification."
+      },
+      {
+        "type": "heading",
+        "content": "Key Research and Concentration Estimates"
+      },
+      {
+        "type": "paragraph",
+        "content": "Cocks, F.H. (2010) in Icarus 206 provides the primary source for the PSR cold-trap concentration estimate of 50 ppb+, modeling cryogenic accumulation in polar craters. Apollo sample databases show 1.4\u201315 ppb from direct measurements of returned regolith in sunlit areas. Kim et al. (2019) mapped global distribution with maximum ~20 ppb in sunlit titanium-rich maria, confirming temperature-dependent retention. Olson et al. (2021) from NASA NTRS provides an engineering feasibility baseline at 20 ppb \u2014 notably assuming PSR concentrations similar to equatorial, with the PSR premium not yet incorporated into NASA mission planning."
+      },
+      {
+        "type": "heading",
+        "content": "Comparative Concentration Summary"
+      },
+      {
+        "type": "paragraph",
+        "content": "Equatorial Maria (Ti-rich): Up to ~20 ppb, retained through mineral-bound ilmenite with high solar wind flux. Highlands: 1\u20134 ppb due to low titanium content and poor mineral retention. Polar Craters (PSRs): Up to ~50 ppb (theoretical), retained through cryogenic cold-trapping at 20\u201370 K with no diurnal degassing. This last figure remains unverified by in-situ measurement."
+      },
+      {
+        "type": "heading",
+        "content": "Key Caveats for Planning Purposes"
+      },
+      {
+        "type": "paragraph",
+        "content": "Source accuracy: The 50 ppb PSR figure originates from Cocks (2010) \u2014 a theoretical model, not a direct measurement. No sample return or landed mission has yet measured He\u00B3 in a PSR. NASA baseline: NASA's own 2021 engineering feasibility paper assumes PSR He\u00B3 concentrations are similar to equatorial regions \u2014 the premium has not been incorporated into mission architecture planning."
+      },
+      {
+        "type": "paragraph",
+        "content": "Temperature range: PSR temperatures are 20\u201370 K, not 50\u2013100 K as sometimes stated. This is relevant to hardware survival and power budgeting for extraction equipment. Extraction trade-off: The equatorial maria (Mare Tranquillitatis, Oceanus Procellarum) remain the highest-confidence targets for near-term He\u00B3 extraction due to validated titanium-ilmenite concentrations and accessible terrain."
+      },
+      {
+        "type": "paragraph",
+        "content": "Extraction energy: The weakly bound inter-grained He\u00B3 in PSRs may require lower extraction temperatures than ilmenite-bound equatorial He\u00B3 (~700\u00B0C), but operating at 20\u201370 K introduces severe power and hardware durability constraints."
+      },
+      {
+        "type": "heading",
+        "content": "Verified Citations"
+      },
+      {
+        "type": "paragraph",
+        "content": "Primary sources: [1] Wikipedia / Apollo sample database (He\u00B3 lunar concentrations). [2] Fa & Jin (2007), Icarus 190 \u2014 Quantitative estimation of He\u00B3 spatial distribution. [3] Cocks (2010), Icarus 206 \u2014 He\u00B3 in permanently shadowed lunar surfaces. [4] Kim et al. (2019), Planet. Space Sci. 177 \u2014 He\u00B3-rich landing sites. [5] Olson (2021), NASA NTRS \u2014 He\u00B3 mining concepts and ISRU synergies. [6] Bhatt et al. (2020), Remote Sensing 12(20) \u2014 Solar wind He\u00B3 retention analysis. [7] Siegler et al. (2016), Nature \u2014 Lunar true polar wander. [8] Wikipedia \u2014 Permanently shadowed crater (LRO Diviner data). [9] Arnold (1979), JGR 84(B10) \u2014 Ice in lunar polar regions. [10] Slyuta et al. (2007), LPSC Abstract 2175. [11] Bickel et al. (2021), Nature Comms. 12 \u2014 Deep learning PSR imaging."
+      }
+    ]
+  },
+  {
+    "slug": "golden-domes-hidden-supply-chain",
+    "title": "Golden Dome's Hidden Supply Chain: Where Tier-2 Capital Is Actually Moving",
+    "subtitle": "Mapping the tier-2 manufacturers whose components the primes cannot build fast enough at scale",
+    "summary": "Everyone is watching Anduril, Lockheed, and SpaceX position for Golden Dome. The $151B SHIELD contract vehicle now has 2,100 qualifying vendors. This post maps the layer most investors aren't watching yet: the tier-2 manufacturers — from Apex Space's satellite buses to AST SpaceMobile's defense broadband — whose components the primes cannot build fast enough at scale.",
+    "category": "Defense & Capital",
+    "date": "2026-02-23",
+    "readTime": "10 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/orbital-economics-post-9-golden-domes",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Everyone is watching Anduril, Lockheed, and SpaceX position for Golden Dome. The $151B SHIELD contract vehicle now has 2,100 qualifying vendors. The FY2026 defense bill signed February 3 allocated $13.4B specifically for space and missile defense. Congress has given the Pentagon 60 days to produce a public spend plan. When that plan lands — likely late March or April — it will identify which supply chain categories receive priority capital. The post below maps the layer most investors aren't watching yet: the tier-2 manufacturers whose components the primes cannot build fast enough at scale."
+      },
+      {
+        "type": "heading",
+        "content": "Lead Story: Apex Space — The Satellite Bus That Became an Arsenal"
+      },
+      {
+        "type": "paragraph",
+        "content": "Los Angeles, CA | Founded 2022 | $400M+ raised | Valuation: $1B+"
+      },
+      {
+        "type": "paragraph",
+        "content": "Apex doesn't build interceptors. It builds the platform that carries them — and that distinction may matter more than any individual weapons contract. The company has completed two $200M funding rounds in consecutive quarters and is now the de facto mass-manufacturer of configurable satellite buses for defense constellations. Its three platforms — Aries, Nova, and Comet — carry 100 to 500 kg of payload. In their heavier Orbital Magazine configuration, the Nova and Comet can host 1,000 kg and 5,000 kg of interceptor payload respectively. A new factory is already equipped to produce 200+ satellites per year."
+      },
+      {
+        "type": "paragraph",
+        "content": "For Golden Dome, the Nova bus is the host for Project Shadow: a self-funded, $15M in-orbit demonstration of an \"Orbital Magazine\" — a spacecraft that stores, thermally controls, and deploys kinetic interceptors on command. Launch is scheduled for NET June 2026. The spacecraft uses a software-defined radio transmitting Link-182 messages — the exact data link standard the U.S. Space Force has adopted for MILNET, its future low-Earth orbit communications relay network. Apex is pre-integrating into the DoD architecture before that architecture is fully defined."
+      },
+      {
+        "type": "paragraph",
+        "content": "The Pentagon doesn't need one demonstration. It needs thousands of satellite buses, produced at commercial rates, to field a viable constellation. Apex has also announced a strategic partnership with Anduril to supply buses for Anduril's defense payloads — a tier-1-to-tier-2 supply relationship forming in public view."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Pre-IPO at $1B+ valuation. June 2026 Project Shadow launch is the nearest public milestone. Factory scale-up trajectory and the Anduril partnership signal that contract pipeline is forming ahead of formal Golden Dome awards."
+      },
+      {
+        "type": "heading",
+        "content": "Voyager Technologies (NYSE: VOYG) — Defense & Space Infrastructure"
+      },
+      {
+        "type": "paragraph",
+        "content": "Denver, CO | Public June 2025"
+      },
+      {
+        "type": "paragraph",
+        "content": "Voyager is currently the only publicly traded pure-play in this tier-2 supply chain, making it the most visible benchmark for the sector. In October 2025, Voyager acquired ExoTerra Resource, a developer of high-efficiency electric propulsion systems enabling precise spacecraft maneuvering — a critical capability for any constellation that needs to reposition, avoid threats, or sustain mission advantage. In January 2026, Voyager secured a patent for producing ultra-pure optical crystals in microgravity, with ISS validation flights planned for spring 2026. The stock is currently trading around $25.58, roughly 41% below analyst consensus target, after a 30-day pullback."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Public, liquid, and executing across multiple Golden Dome-adjacent categories. Key 2026 watch: NASA Phase 2 Commercial Low-Earth Orbit Destination (CLD) award — a contract win could be transformative; a miss would pressure the balance sheet."
+      },
+      {
+        "type": "heading",
+        "content": "True Anomaly — Autonomous Orbital Vehicles + Space Domain Awareness"
+      },
+      {
+        "type": "paragraph",
+        "content": "Centennial, CO | $389M raised | Series C led by Accel"
+      },
+      {
+        "type": "paragraph",
+        "content": "True Anomaly builds two interlocking products: the Jackal autonomous orbital vehicle, which can maneuver, track, and operate against threats on orbit; and Mosaic, the AI-driven software operating system for space domain awareness. The company was awarded a $30M Space Force contract for the VICTUS HAZE mission — a tactically responsive space demonstration alongside Firefly Aerospace. In November 2025, True Anomaly was among 18 companies awarded classified OTA contracts for boost-phase space-based interceptor prototypes; its name has since surfaced publicly. Jackal and Mosaic are both scheduled for their first independent missions to GEO and cislunar space in 2026."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Pre-IPO, $389M raised, active government contracts. SVP Stephen Kitay — former Pentagon space policy lead — has been publicly positioning the company against the 2026 National Defense Strategy, a signal of deliberate contract pipeline development."
+      },
+      {
+        "type": "heading",
+        "content": "Portal Space Systems — Solar Thermal Propulsion"
+      },
+      {
+        "type": "paragraph",
+        "content": "Redmond, WA | Early stage"
+      },
+      {
+        "type": "paragraph",
+        "content": "Portal is developing the Afterburner, a solar thermal propulsion system that uses concentrated sunlight to superheat propellant — delivering higher specific impulse than chemical thrusters at a fraction of the cost. The problem it solves: a maneuverable Golden Dome constellation requires spacecraft that can reposition and persist without burning through chemical propellant budgets. Portal's approach makes sustained, responsive maneuvering economically viable. The company is based in Redmond, WA, inside the same aerospace corridor as Blue Origin and Boeing's space programs, and has received early-stage government interest."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Early stage, no public funding round disclosed. Payload Space's 2025 Golden Dome supply chain review flagged Portal as a company to watch. A Series A announcement in 2026 would be the catalyst to track."
+      },
+      {
+        "type": "heading",
+        "content": "Quantum Space — Cislunar Situational Awareness + Relay Infrastructure"
+      },
+      {
+        "type": "paragraph",
+        "content": "Columbia, MD | Draper Laboratory-backed"
+      },
+      {
+        "type": "paragraph",
+        "content": "Quantum Space began as a cislunar relay play — positioning communications and navigation nodes beyond GEO to support lunar missions. Its pivot toward Golden Dome is more recent but logical: any SBI constellation that needs to cover ICBM boost phases over polar routes will eventually require sensor and relay architecture in the cislunar environment. Quantum Space's Eos spacecraft program has drawn U.S. Space Force interest, and the Draper Laboratory backing provides deep institutional credibility in defense-adjacent navigation and guidance systems."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Draper-backed, Space Force interest confirmed. As Golden Dome architecture discussions expand beyond LEO, cislunar-capable companies gain strategic relevance. No public funding round yet — watch for one in 2026."
+      },
+      {
+        "type": "heading",
+        "content": "AST SpaceMobile (NASDAQ: ASTS) — Space-Based Cellular Connectivity"
+      },
+      {
+        "type": "paragraph",
+        "content": "Midland, TX | Public | Market cap ~$4B"
+      },
+      {
+        "type": "paragraph",
+        "content": "AST SpaceMobile is building the first space-based cellular broadband network capable of connecting standard smartphones directly from orbit — no specialized hardware required. The relevance to Golden Dome: the DoD has now awarded AST SpaceMobile a prime contract position on U.S. missile defense infrastructure, recognizing its direct-to-device broadband capability as a resilient communications layer for defense operations. The company launched its first commercial BlueBird satellites in 2024 and is scaling the constellation aggressively through 2026."
+      },
+      {
+        "type": "paragraph",
+        "content": "Investor Consideration: Publicly traded, liquid, and now formally integrated into missile defense architecture. The DoD contract represents a material shift in how AST's addressable market is understood — from commercial carrier play to dual-use defense infrastructure."
+      },
+      {
+        "type": "heading",
+        "content": "The Signal: Watch for the Spend Plan"
+      },
+      {
+        "type": "paragraph",
+        "content": "The SHIELD IDIQ mechanism means qualifying vendors can receive task orders without new sole-source justifications or full competitive re-bids — that's not how defense contracting normally works. Congress has now demanded Gen. Guetlein's office publish a comprehensive spend plan within 60 days of the February 3 bill signing. When that plan becomes public — likely late March or April 2026 — it will be the clearest signal yet of which tier-2 supply chain categories are being prioritized. That document is the next issue to watch."
+      }
+    ]
+  },
+  {
+    "slug": "real-cost-orbit-2026",
+    "title": "The Real Cost of Getting to Orbit in 2026",
+    "subtitle": "A comprehensive breakdown of per-kilogram launch costs across all active providers",
+    "summary": "A deep analysis of per-kilogram launch costs across all active providers, from SpaceX Falcon 9 ($3,063/kg) to Rocket Lab Electron ($19,231/kg). We break down why Starship could push costs below $500/kg and what that means for commercial satellite operators, university CubeSat programs, and defense payloads.",
+    "category": "Launch Economics",
+    "date": "2026-02-18",
+    "readTime": "8 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/real-cost-orbit-2026",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "The cost of reaching orbit has never been lower — but it's still far from cheap. In 2026, commercial launch costs range from roughly $3,000 to $20,000 per kilogram depending on the vehicle, orbit, and mission profile. Understanding these numbers is critical for anyone planning a satellite deployment, research mission, or constellation build-out."
+      },
+      {
+        "type": "heading",
+        "content": "Current Per-Kilogram Pricing by Provider"
+      },
+      {
+        "type": "paragraph",
+        "content": "SpaceX Falcon 9 remains the benchmark at approximately $3,063/kg to LEO for a dedicated mission. Rideshare slots on Transporter missions can reduce this further for small payloads. ULA's Vulcan Centaur enters the market at roughly $7,500/kg, offering higher-energy orbits and government-grade reliability. Rocket Lab's Electron, designed for dedicated small-sat launches, comes in at around $19,231/kg — a premium justified by precise orbital insertion and rapid scheduling."
+      },
+      {
+        "type": "heading",
+        "content": "The Starship Factor"
+      },
+      {
+        "type": "paragraph",
+        "content": "SpaceX's Starship promises to fundamentally reshape launch economics. With a projected cost below $500/kg to LEO at full reusability, Starship would reduce launch costs by an order of magnitude. This isn't just a pricing shift — it changes satellite design philosophy. When launch is cheap, satellites can be heavier, use less expensive components, and be replaced more frequently."
+      },
+      {
+        "type": "heading",
+        "content": "What This Means for Different Customers"
+      },
+      {
+        "type": "paragraph",
+        "content": "For commercial constellation operators like those building broadband networks, lower costs mean denser satellite meshes and faster deployment timelines. For university CubeSat programs, rideshare missions already make space accessible at $300K-$1M per launch opportunity. For defense and national security payloads, the equation balances cost against assured access, schedule reliability, and orbit flexibility — areas where ULA and Arianespace maintain strong positions."
+      },
+      {
+        "type": "heading",
+        "content": "Key Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "content": "The launch market in 2026 offers more options at more price points than ever before. The right choice depends on your payload mass, target orbit, schedule flexibility, and risk tolerance. Use our calculator to model scenarios with real provider data and find the optimal launch solution for your mission."
+      }
+    ]
+  },
+  {
+    "slug": "leo-geo-meo-orbit-comparison",
+    "title": "LEO vs GEO vs MEO: Choosing the Right Orbit for Your Mission",
+    "subtitle": "A practical comparison of orbital regimes for mission planners",
+    "summary": "Each orbit type serves different purposes and comes with vastly different costs. LEO (200-2,000 km) is ideal for Earth observation and broadband constellations. GEO (35,786 km) provides fixed coverage for communications. MEO sits between them for navigation. We compare delta-v requirements, launch costs, and mission profiles for each.",
+    "category": "Orbital Mechanics",
+    "date": "2026-02-11",
+    "readTime": "10 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/leo-geo-meo-orbit-comparison",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Choosing the right orbit is one of the most consequential decisions in mission planning. It determines your launch cost, available rockets, ground coverage pattern, communication latency, radiation environment, and satellite lifetime. This guide breaks down the three primary orbital regimes and when each makes sense."
+      },
+      {
+        "type": "heading",
+        "content": "Low Earth Orbit (LEO): 200–2,000 km"
+      },
+      {
+        "type": "paragraph",
+        "content": "LEO is the most accessible and affordable orbit. Delta-v requirements are approximately 9.4 km/s from Earth's surface, and nearly every operational launch vehicle can reach it. LEO is the domain of the International Space Station, Earth observation satellites, and mega-constellations like Starlink and OneWeb. The tradeoff: LEO satellites move quickly relative to the ground, requiring large constellations for continuous coverage and more complex ground station networks."
+      },
+      {
+        "type": "heading",
+        "content": "Medium Earth Orbit (MEO): 2,000–35,786 km"
+      },
+      {
+        "type": "paragraph",
+        "content": "MEO occupies the space between LEO and GEO. It's primarily used for navigation constellations — GPS (USA), Galileo (EU), GLONASS (Russia), and BeiDou (China) all operate in MEO. The higher altitude means each satellite covers a larger ground footprint, requiring fewer satellites for global coverage than LEO but introducing higher latency than GEO. MEO missions cost more than LEO due to increased delta-v requirements and longer transfer times."
+      },
+      {
+        "type": "heading",
+        "content": "Geostationary Orbit (GEO): 35,786 km"
+      },
+      {
+        "type": "paragraph",
+        "content": "GEO is unique: satellites at this altitude orbit at the same rate Earth rotates, appearing to hover over a fixed point on the equator. This makes GEO ideal for communications satellites, weather monitoring, and military early-warning systems. The delta-v requirement is approximately 14 km/s, significantly more than LEO, which limits the number of vehicles capable of GEO insertion and increases per-kilogram costs substantially."
+      },
+      {
+        "type": "heading",
+        "content": "Cost and Vehicle Comparison"
+      },
+      {
+        "type": "paragraph",
+        "content": "A Falcon 9 can deliver 22,800 kg to LEO but only 8,300 kg to GTO (the transfer orbit for GEO). This capacity reduction directly translates to higher per-kilogram costs for GEO missions. When planning your mission, consider not just the launch cost but the total cost of operations — including ground infrastructure, communication links, and replacement schedules. Our mission planner models these tradeoffs with real provider data."
+      }
+    ]
+  },
+  {
+    "slug": "cubesat-university-guide",
+    "title": "CubeSat Launch Programs: A University Buyer's Guide",
+    "subtitle": "Everything academic institutions need to know about getting a satellite to orbit",
+    "summary": "Universities and research institutions are launching more satellites than ever. This guide covers the full lifecycle: from building a 1U-6U CubeSat to selecting a rideshare provider, navigating regulatory approval, and managing mission operations. Includes cost breakdowns, timeline expectations, and provider comparisons.",
+    "category": "Education",
+    "date": "2026-02-04",
+    "readTime": "12 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/cubesat-university-guide",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Academic satellite programs have exploded in the past decade. What once required national space agency backing can now be accomplished by a university lab with a modest budget and a two-year timeline. CubeSats — standardized small satellites measured in 10cm units (1U = 10×10×10 cm) — have democratized access to space for research and education."
+      },
+      {
+        "type": "heading",
+        "content": "Understanding CubeSat Form Factors"
+      },
+      {
+        "type": "paragraph",
+        "content": "CubeSats range from 1U (1.33 kg) to 12U and beyond. For university programs, 1U to 6U is most common. A 1U CubeSat is sufficient for simple technology demonstrations and basic Earth imaging. 3U provides room for more capable payloads including better optics, communication experiments, and scientific instruments. 6U is becoming the standard for serious research missions, offering enough volume and mass budget for meaningful scientific returns."
+      },
+      {
+        "type": "heading",
+        "content": "Launch Options and Costs"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rideshare missions are the most cost-effective path to orbit for CubeSats. SpaceX's Transporter rideshare missions offer slots starting around $275K for a 1U deployer. Rocket Lab offers dedicated missions with precise orbital insertion at higher per-kg cost but with the advantage of choosing your exact orbit. ISRO's PSLV also provides competitive rideshare pricing for academic payloads. Total mission costs (satellite build + launch + operations) typically range from $500K for a simple 1U to $3M+ for a capable 6U mission."
+      },
+      {
+        "type": "heading",
+        "content": "Regulatory Requirements"
+      },
+      {
+        "type": "paragraph",
+        "content": "In the United States, CubeSat missions require FCC licensing for radio frequency use and FAA licensing for launch. Universities must also register with the UN Office for Outer Space Affairs through their national space agency. The licensing process typically takes 6-12 months, so it should begin well before your launch window. International programs face similar requirements through their national regulatory bodies."
+      },
+      {
+        "type": "heading",
+        "content": "Timeline and Planning"
+      },
+      {
+        "type": "paragraph",
+        "content": "A realistic timeline from program start to launch is 18-36 months. This includes satellite design and build (8-18 months), environmental testing (2-3 months), regulatory licensing (6-12 months, often in parallel), launch integration (1-3 months), and early operations (1-3 months). Use our mission planning tools to model costs and timelines based on your specific payload requirements."
+      }
+    ]
+  },
+  {
+    "slug": "starship-500-per-kg-impact",
+    "title": "SpaceX Starship: What $500/kg to LEO Means for the Industry",
+    "subtitle": "Modeling the downstream effects of dramatically lower launch costs",
+    "summary": "Starship's promised cost reduction isn't just a number — it's a paradigm shift. We model the downstream effects on satellite design (heavier, cheaper components), constellation economics (larger, denser networks), and the competitive landscape for legacy providers like ULA, Arianespace, and Roscosmos.",
+    "category": "Market Analysis",
+    "date": "2026-01-28",
+    "readTime": "9 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/starship-500-per-kg-impact",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "When SpaceX achieves full Starship reusability with rapid turnaround, the launch industry faces its most significant disruption since the introduction of reusable first stages. At a projected $500/kg to LEO — compared to the current Falcon 9 benchmark of $3,063/kg — the economics of space change fundamentally."
+      },
+      {
+        "type": "heading",
+        "content": "Satellite Design Revolution"
+      },
+      {
+        "type": "paragraph",
+        "content": "Today's satellites are engineered to be as light as possible because every kilogram costs thousands of dollars to launch. At $500/kg, mass constraints relax dramatically. Satellite manufacturers can use heavier, cheaper, more readily available components instead of space-grade minimized versions. This reduces satellite build costs and shortens production timelines. The result: cheaper, faster-to-build satellites that can be replaced more frequently."
+      },
+      {
+        "type": "heading",
+        "content": "Constellation Economics"
+      },
+      {
+        "type": "paragraph",
+        "content": "Starship's massive payload capacity (100-150 tonnes to LEO) combined with low per-kg costs makes ultra-large constellations economically viable. Instead of 1,000-satellite networks, operators could deploy 10,000+ satellites for denser coverage, lower latency, and more redundancy. This changes the business model for broadband, IoT, and Earth observation services."
+      },
+      {
+        "type": "heading",
+        "content": "Competitive Pressure on Legacy Providers"
+      },
+      {
+        "type": "paragraph",
+        "content": "ULA, Arianespace, and Roscosmos face existential competitive pressure. ULA's Vulcan Centaur at ~$7,500/kg and Ariane 6 at similar price points cannot compete on cost alone. These providers must differentiate on reliability, orbit capability, government relationships, and assured access mandates. Roscosmos, already struggling with sanctions and aging infrastructure, faces the steepest challenge."
+      },
+      {
+        "type": "heading",
+        "content": "Timeline and Reality Check"
+      },
+      {
+        "type": "paragraph",
+        "content": "The $500/kg target assumes full and rapid reusability of both stages plus the payload fairing, high launch cadence, and mature operations. As of early 2026, Starship has completed several test flights with increasing success, but operational commercial service with full reusability remains ahead. The trajectory is clear, but the timeline is uncertain. Smart operators are planning for a range of scenarios."
+      }
+    ]
+  },
+  {
+    "slug": "space-insurance-101",
+    "title": "Space Insurance 101: Protecting Your Payload Investment",
+    "subtitle": "Understanding premiums, coverage, and how to reduce launch insurance costs",
+    "summary": "Launch insurance premiums typically run 5-15% of the total mission value. We explain the underwriting process, what policies cover (launch failure, in-orbit anomalies, third-party liability), and how to reduce premiums. Includes data on historical claim rates by provider and vehicle type.",
+    "category": "Launch Economics",
+    "date": "2026-01-21",
+    "readTime": "7 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/space-insurance-101",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Space insurance is a specialized but essential component of mission planning. With satellite values ranging from $5M for a small commercial bird to $500M+ for major government systems, protecting that investment against launch failure or in-orbit anomalies is a critical financial decision. Understanding how the space insurance market works can save you significant costs."
+      },
+      {
+        "type": "heading",
+        "content": "Types of Space Insurance"
+      },
+      {
+        "type": "paragraph",
+        "content": "There are four main categories: Pre-launch insurance covers the satellite during manufacturing and transport. Launch insurance covers from ignition through orbit insertion. In-orbit insurance covers the satellite during its operational life. Third-party liability insurance covers damage to other assets or people. Most commercial missions carry launch insurance at minimum, with premiums typically ranging from 5-15% of the insured value."
+      },
+      {
+        "type": "heading",
+        "content": "How Premiums Are Calculated"
+      },
+      {
+        "type": "paragraph",
+        "content": "Underwriters assess several factors: the launch vehicle's historical success rate, the complexity of the mission (simple LEO vs. complex GTO insertion), the satellite's design heritage, the insured value, and current market conditions. A Falcon 9 launch, with a 98%+ success rate, typically commands lower premiums than a newer vehicle with less flight heritage. Launch vehicle track record is the single largest factor in premium calculation."
+      },
+      {
+        "type": "heading",
+        "content": "Reducing Your Premiums"
+      },
+      {
+        "type": "paragraph",
+        "content": "Several strategies can lower insurance costs: choosing a vehicle with extensive flight heritage, accepting higher deductibles, insuring for replacement cost rather than new value, demonstrating satellite design heritage through prior successful missions, and maintaining strong quality assurance documentation. For constellation operators launching multiple identical satellites, portfolio approaches and self-insurance on later units can significantly reduce per-satellite insurance costs."
+      },
+      {
+        "type": "heading",
+        "content": "Market Trends"
+      },
+      {
+        "type": "paragraph",
+        "content": "The space insurance market has become more competitive as launch reliability has improved. Premiums have trended downward from historical rates of 15-25% to current rates of 5-12% for established vehicles. However, the market remains cyclical — a major loss event (satellite failure, launch anomaly) can tighten capacity and push rates higher across the industry. Our mission planning tools include insurance estimation based on current market conditions."
+      }
+    ]
+  },
+  {
+    "slug": "rocketlab-vs-spacex-smallsat",
+    "title": "Rocket Lab vs SpaceX: Small Sat Economics Compared",
+    "subtitle": "Dedicated launch vs rideshare — which path is right for your payload?",
+    "summary": "Dedicated vs rideshare: which path makes sense for your payload? Rocket Lab's Electron offers precise orbital insertion for small payloads at a premium, while SpaceX's Transporter rideshare missions offer the lowest per-kg cost but less flexibility. We analyze schedule reliability, integration timelines, and total mission cost.",
+    "category": "Provider Analysis",
+    "date": "2026-01-14",
+    "readTime": "11 min",
+    "substackUrl": "https://orbitaleconomics.substack.com/p/rocketlab-vs-spacex-smallsat",
+    "author": "Orbital Economics",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "For payloads under 300 kg, two launch approaches dominate the market: Rocket Lab's dedicated Electron missions and SpaceX's Transporter rideshare program. Each offers distinct advantages, and choosing between them depends on your mission requirements, budget, and timeline flexibility. This analysis provides a direct comparison to help inform that decision."
+      },
+      {
+        "type": "heading",
+        "content": "Rocket Lab Electron: The Dedicated Approach"
+      },
+      {
+        "type": "paragraph",
+        "content": "Electron is purpose-built for small payloads up to 300 kg to LEO. At approximately $7.5M per mission ($19,231/kg at max capacity), Electron costs significantly more per kilogram than a rideshare slot. But you get something invaluable: your own rocket. This means precise orbital insertion (exact altitude, inclination, and LTAN), your preferred launch window, and no dependency on a primary payload's schedule. For missions where orbit precision is critical — Earth observation with specific lighting requirements, for example — Electron's premium is justified."
+      },
+      {
+        "type": "heading",
+        "content": "SpaceX Transporter: The Rideshare Value Play"
+      },
+      {
+        "type": "paragraph",
+        "content": "SpaceX's Transporter rideshare missions offer the lowest per-kilogram cost for small satellites, with slots starting around $5,500/kg. These missions typically deploy dozens of satellites into sun-synchronous LEO. The tradeoff: you share the ride with many other payloads, the orbit is predetermined, and scheduling depends on SpaceX's Transporter cadence (roughly quarterly in 2026). If your mission can tolerate a specific orbit and flexible timing, rideshare economics are hard to beat."
+      },
+      {
+        "type": "heading",
+        "content": "Schedule Reliability and Integration"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rocket Lab has demonstrated strong schedule reliability with launch campaigns as short as a few weeks between missions. Integration timelines are typically 4-8 weeks. SpaceX Transporter missions require earlier payload commitment (3-6 months) and have fixed launch dates that occasionally slip. However, SpaceX's high launch cadence means delays rarely push more than a few weeks."
+      },
+      {
+        "type": "heading",
+        "content": "The Decision Framework"
+      },
+      {
+        "type": "paragraph",
+        "content": "Choose Rocket Lab Electron when: orbit precision is critical, you need a specific launch window, your payload requires unique deployment conditions, or you have a time-sensitive mission. Choose SpaceX Transporter when: cost is the primary driver, sun-synchronous LEO is acceptable, schedule flexibility exists, or you're deploying a constellation where exact orbit parameters can be standardized. Many operators use both: Transporter for routine constellation replenishment and Electron for specialty deployments. Use our calculator to compare total mission costs across both providers."
+      }
+    ]
+  }
+]

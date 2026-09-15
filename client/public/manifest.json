@@ -1,0 +1,67 @@
+{
+  "name": "Orbit to Orbit Express",
+  "short_name": "O2O Express",
+  "description": "Calculate satellite launch costs, compare 15+ rockets, and track upcoming missions. Free space logistics platform for engineers, researchers, and space professionals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e3000f",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Orbit to Orbit Express — Launch Cost Calculator"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Launch Calculator",
+      "short_name": "Calculator",
+      "description": "Calculate satellite launch costs and mission requirements",
+      "url": "/",
+      "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Launch Calendar",
+      "short_name": "Calendar",
+      "description": "Track upcoming rocket launches with live countdowns",
+      "url": "/launches",
+      "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Company Directory",
+      "short_name": "Directory",
+      "description": "Browse 150+ space companies and 155+ agencies worldwide",
+      "url": "/directory",
+      "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Industry Insights",
+      "short_name": "Insights",
+      "description": "Orbital Economics research and space industry analysis",
+      "url": "/insights",
+      "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

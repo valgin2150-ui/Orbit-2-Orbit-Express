@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Germanium Investment Atlas — Orbital Economics Research</title>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     PLAUSIBLE ANALYTICS — privacy-first, cookieless, no consent banner needed
+     1. Sign up at plausible.io, add site "orbit2orbitexpress.com"
+     2. Replace orbit2orbitexpress.com below with YOUR exact domain if different
+     3. The script.tagged-events.js variant is REQUIRED for custom print/share events
+     ═══════════════════════════════════════════════════════════════════ -->
+<script defer data-domain="orbit2orbitexpress.com"
+        src="https://plausible.io/js/script.tagged-events.js"></script>
+<script>
+  // Plausible queues events before the script loads; this stub makes calls safe
+  window.plausible = window.plausible || function() {
+    (window.plausible.q = window.plausible.q || []).push(arguments);
+  };
+
+  // Helper: fire a named Plausible event with optional properties
+  function trackEvent(name, props) {
+    try { window.plausible(name, props ? { props: props } : {}); } catch (e) { /* no-op */ }
+  }
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #303234;
+    --surface: #333537;
+    --surface2: #383a3c;
+    --border: #85898d;
+    --border2: #969a9e;
+    --text: #ffffff;
+    --dim: #e5e7eb;
+    --bright: #ffffff;
+    --red: #e04040;
+    --orange: #d87030;
+    --yellow: #c0a828;
+    --green: #30a860;
+    --blue: #3070d0;
+    --teal: #28a090;
+    --gold: #c89840;
+    --purple: #9060c8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── MODAL OVERLAY ── */
+  body {
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* Trigger button — embed this on the O2O page */
+  .oe-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--gold);
+    color: var(--bright);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 22px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    text-decoration: none;
+  }
+  .oe-trigger-btn:hover {
+    background: rgba(200,152,64,0.08);
+    border-left-color: #e0b050;
+  }
+  .oe-trigger-btn .btn-icon {
+    font-size: 18px;
+  }
+  .oe-trigger-btn .btn-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* Overlay backdrop */
+  .oe-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(4,6,10,0.92);
+    z-index: 9999;
+    overflow-y: auto;
+    backdrop-filter: blur(4px);
+  }
+  .oe-overlay.open { display: block; }
+
+  /* Modal panel */
+  .oe-modal {
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: var(--bg);
+    border-left: 1px solid var(--border2);
+    border-right: 1px solid var(--border2);
+    padding: 0 0 80px;
+  }
+
+  /* ── NAV BAR ── */
+  .oe-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7,9,12,0.97);
+    border-bottom: 1px solid var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    height: 52px;
+    backdrop-filter: blur(8px);
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+    text-transform: uppercase;
+  }
+  .nav-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border2);
+  }
+  .nav-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .nav-link:hover {
+    color: var(--text);
+    border-color: var(--border2);
+  }
+  .nav-link.primary {
+    color: var(--gold);
+    border-color: rgba(200,152,64,0.3);
+    background: rgba(200,152,64,0.06);
+  }
+  .nav-link.primary:hover {
+    background: rgba(200,152,64,0.12);
+  }
+  .nav-close {
+    background: none;
+    border: 1px solid var(--border2);
+    color: var(--dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+    margin-left: 12px;
+  }
+  .nav-close:hover { color: var(--text); border-color: var(--text); }
+
+  /* Print + Share action buttons in nav */
+  .nav-action {
+    background: none;
+    border: 1px solid var(--border2);
+    color: var(--dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+  .nav-action:hover { color: var(--text); border-color: var(--text); }
+  .share-feedback {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--teal);
+    margin-left: 6px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .share-feedback.show { opacity: 1; }
+
+  /* ── CONTENT ── */
+  .oe-content {
+    padding: 40px 40px 0;
+  }
+
+  /* Header */
+  .report-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .report-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.04em;
+    color: var(--bright);
+    line-height: 0.92;
+    margin-bottom: 12px;
+  }
+  .report-sub {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.65;
+    max-width: 680px;
+    margin-bottom: 8px;
+  }
+  .report-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border2);
+  }
+
+  /* Thesis */
+  .thesis {
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--gold);
+    padding: 18px 20px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .thesis strong { color: var(--bright); }
+  .thesis .space-line {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--teal);
+    line-height: 1.8;
+  }
+
+  /* Section */
+  .sec {
+    margin: 36px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sec-n {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--border2);
+    line-height: 1;
+    min-width: 32px;
+  }
+  .sec-t {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    border-left: 2px solid var(--border2);
+    padding-left: 10px;
+  }
+
+  /* Plan cards */
+  .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 640px) { .plan-grid { grid-template-columns: 1fr; } }
+  .plan-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px 16px;
+    position: relative;
+  }
+  .plan-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .pa::before { background: var(--gold); }
+  .pb::before { background: var(--blue); }
+  .pc::before { background: var(--teal); }
+  .pd::before { background: var(--purple); }
+
+  .plan-lbl {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin-bottom: 4px;
+  }
+  .pa .plan-lbl { color: var(--gold); }
+  .pb .plan-lbl { color: var(--blue); }
+  .pc .plan-lbl { color: var(--teal); }
+  .pd .plan-lbl { color: var(--purple); }
+
+  .plan-co { font-weight: 600; color: var(--bright); font-size: 15px; margin-bottom: 2px; }
+  .plan-loc { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); margin-bottom: 10px; }
+  .plan-body { font-size: 12px; color: var(--text); line-height: 1.6; margin-bottom: 12px; }
+
+  .badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+  .b-op  { background: rgba(48,168,96,0.12); border: 1px solid rgba(48,168,96,0.3); color: var(--green); }
+  .b-con { background: rgba(200,152,64,0.12); border: 1px solid rgba(200,152,64,0.3); color: var(--gold); }
+  .b-exp { background: rgba(48,112,208,0.12); border: 1px solid rgba(48,112,208,0.3); color: var(--blue); }
+  .b-pre { background: rgba(216,112,48,0.12); border: 1px solid rgba(216,112,48,0.3); color: var(--orange); }
+
+  .access-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); line-height: 1.6; margin-top: 8px; }
+  .access-note a { color: var(--blue); text-decoration: none; }
+  .access-note a:hover { text-decoration: underline; }
+
+  /* Table */
+  .tw { overflow-x: auto; border: 1px solid var(--border); border-radius: 3px; margin-bottom: 32px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--surface); border-bottom: 1px solid var(--border2); }
+  th {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding: 10px 14px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.015); }
+  td { padding: 11px 14px; font-size: 12px; vertical-align: middle; }
+  td a { color: var(--blue); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .td-co { font-weight: 600; color: var(--bright); }
+  .td-plan { font-family: 'DM Mono', monospace; font-size: 10px; }
+
+  /* Secret box */
+  .secret {
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--teal);
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .secret-lbl {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+  .secret p { font-size: 13px; line-height: 1.75; color: var(--text); }
+  .secret strong { color: var(--bright); }
+
+  /* Body prose */
+  .prose { font-size: 13px; line-height: 1.75; color: var(--text); margin-bottom: 20px; }
+  .prose strong { color: var(--bright); }
+  .prose a { color: var(--blue); text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+
+  /* Callout */
+  .callout {
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    margin: 0 0 28px;
+    font-size: 12px;
+    line-height: 1.7;
+    background: rgba(200,152,64,0.04);
+  }
+  .callout strong { color: var(--bright); }
+
+  /* Divider */
+  hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+  /* Footer */
+  .oe-footer {
+    margin-top: 48px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+    line-height: 1.8;
+  }
+  .footer-right {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .footer-btn {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .fb-home {
+    border: 1px solid var(--border2);
+    color: var(--text);
+    background: var(--surface);
+  }
+  .fb-home:hover { border-color: var(--text); }
+  .fb-sub {
+    border: 1px solid rgba(200,152,64,0.4);
+    color: var(--gold);
+    background: rgba(200,152,64,0.08);
+  }
+  .fb-sub:hover { background: rgba(200,152,64,0.15); }
+  /* ══════════════════════════════════════════════════════
+     PRINT STYLESHEET — clean white-paper output
+     Strips dark theme, hides nav/buttons, expands modal to full page
+     ══════════════════════════════════════════════════════ */
+  @media print {
+    /* Force light background, dark text for ink economy + readability */
+    body, .oe-overlay, .oe-modal, .oe-content {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+    /* Show the modal content even if it was closed, hide the trigger page */
+    .oe-overlay { display: block !important; position: static !important; background: #fff !important; backdrop-filter: none !important; }
+    .oe-modal { max-width: 100% !important; border: none !important; min-height: auto !important; padding: 0 !important; }
+    /* Hide everything that shouldn't print */
+    .oe-nav, .oe-trigger-btn, .nav-action, .nav-close, .nav-link,
+    .share-feedback, .footer-right { display: none !important; }
+    /* Hide the standalone trigger-page wrapper (the dark landing div) */
+    body > div[style*="min-height:100vh"] { display: none !important; }
+    /* Recolor text elements for print */
+    .report-title, .plan-co, .td-co, .secret strong, .prose strong, .thesis strong { color: #000 !important; }
+    .report-sub, .prose, .plan-body, td, .thesis { color: #1a1a1a !important; }
+    .report-eyebrow, .plan-lbl, .sec-t, .access-note, .report-meta, th { color: #555 !important; }
+    /* Borders to light grey */
+    .plan-card, .tw, .thesis, .secret, .callout, table, tbody tr, thead tr, .report-meta {
+      border-color: #ccc !important;
+      background: #fff !important;
+    }
+    .plan-card::before { display: none !important; }
+    /* Avoid awkward page breaks inside cards and table rows */
+    .plan-card, .secret, .callout, tbody tr { break-inside: avoid; page-break-inside: avoid; }
+    .sec { break-after: avoid; page-break-after: avoid; }
+    /* Add a print-only header line */
+    .oe-content::before {
+      content: "Germanium Investment Atlas · Orbital Economics · orbit2orbitexpress.com";
+      display: block;
+      font-family: monospace;
+      font-size: 10px;
+      color: #888;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    a { color: #1a1a1a !important; text-decoration: none !important; }
+    /* Show full URLs after links so a printed copy is useful */
+    .access-note a::after, td a::after { content: ""; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     EMBED INSTRUCTIONS FOR ORBIT2ORBITEXPRESS.COM
+     
+     1. Paste the trigger button HTML wherever you want the
+        "Open Report" button to appear on your page.
+     2. Paste the overlay + modal HTML once, anywhere in <body>.
+     3. The modal opens on button click, closes on X or backdrop click.
+     4. Replace the two href="#" links with your actual URLs.
+     ══════════════════════════════════════════════════════════ -->
+
+<!-- TRIGGER BUTTON — paste this on your O2O page where you want the button -->
+<div style="padding:40px;background:#303234;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding-top:80px;">
+  <div style="max-width:560px;width:100%;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#e5e7eb;margin-bottom:16px;">
+      Orbital Economics · Research Report
+    </div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;margin-bottom:12px;letter-spacing:0.04em;">
+      Germanium Investment Atlas
+    </div>
+    <div style="font-size:13px;color:#ffffff;line-height:1.7;margin-bottom:24px;">
+      The supply chain map connecting AI fiber, satellite solar cells, and space defense.
+      Plan A through D investment breakdown. Access instructions for every company tier.
+    </div>
+    <button class="oe-trigger-btn" onclick="openReport()">
+      <span class="btn-icon">📊</span>
+      <span>
+        Open Research Report
+        <span class="btn-sub">Full investment atlas — Plan A through D · Orbital Economics</span>
+      </span>
+    </button>
+  </div>
+</div>
+
+<!-- MODAL OVERLAY — paste this once anywhere in <body> -->
+<div class="oe-overlay" id="oe-overlay" onclick="if(event.target===this){closeModal();}">
+  <div class="oe-modal">
+
+    <!-- STICKY NAV -->
+    <nav class="oe-nav">
+      <div class="nav-left">
+        <span class="nav-logo">Orbit2Orbit Express</span>
+        <div class="nav-divider"></div>
+        <span class="nav-title">Germanium Investment Atlas</span>
+      </div>
+      <div class="nav-links">
+        <a href="https://orbit2orbitexpress.com" class="nav-link" target="_blank">← Home</a>
+        <a href="https://orbit2orbitexpress.substack.com" class="nav-link primary" target="_blank">Subscribe to Orbital Economics ↗</a>
+        <button class="nav-action" onclick="printReport()">⎙ Print</button>
+        <button class="nav-action" onclick="shareReport()">↗ Share</button>
+        <span class="share-feedback" id="shareFeedback">Link copied</span>
+        <button class="nav-close" onclick="closeModal()">✕ Close</button>
+      </div>
+    </nav>
+
+    <!-- REPORT CONTENT -->
+    <div class="oe-content">
+
+      <!-- HEADER -->
+      <div class="report-eyebrow">Orbital Economics · Research Report · June 2026</div>
+      <h1 class="report-title">The Germanium<br>Investment Atlas</h1>
+      <p class="report-sub">
+        The supply chain map connecting AI data center fiber, satellite solar cells,
+        and space defense manufacturing through a single critical mineral — with
+        Plan A through D for non-Chinese supply and access instructions for every
+        investable company across four tiers.
+      </p>
+      <div class="report-meta">
+        Published: June 9, 2026 · Author: Vlad Algin, Orbit2Orbit Express ·
+        For informational purposes only. Not investment advice.
+      </div>
+
+      <!-- THESIS -->
+      <div class="thesis">
+        <strong>The thesis in plain language:</strong> The $600B AI infrastructure build-out runs on optical fiber.
+        Optical fiber requires germanium. Germanium is a byproduct of zinc smelting — you cannot mine it directly.
+        China controls ~60% of global refining. Beijing banned exports to the US in December 2024
+        and retains discretionary licensing control. <strong>The US mines enough germanium-bearing ore
+        to meet domestic demand. It has zero refining capacity to process it.</strong>
+        The correct investment logic: own the zinc smelter with germanium recovery —
+        the byproduct cost basis is near zero, and the demand is structural, not cyclical.
+        Four non-Chinese supply paths are now being built. Most investors know Plan A.
+        Almost nobody knows Plans B, C, and D.
+        <div class="space-line">
+          ▸ SPACE ECONOMY TIE: Germanium is in multi-junction solar cells on every commercial satellite
+          launched today. It is in IR optics on every defense surveillance satellite.
+          It is in photonic components for deep-space laser comm (NASA DSOC architecture).
+          The same supply chain vulnerability that threatens AI fiber threatens every satellite being built.
+        </div>
+      </div>
+
+      <!-- PLAN CARDS -->
+      <div class="sec"><div class="sec-n">01</div><div class="sec-t">Four Non-Chinese Supply Plans — Status and Access</div></div>
+
+      <div class="plan-grid">
+        <div class="plan-card pa">
+          <div class="plan-lbl">Plan A — Primary</div>
+          <div class="plan-co">Korea Zinc / Crucible Metals</div>
+          <div class="plan-loc">Clarksville, Tennessee · KRX: 010130</div>
+          <span class="badge b-con">Construction 2026</span>
+          <div class="plan-body">$7.4B smelter. $4.7B DoD loan + CHIPS Act grant. JPMorgan advisor. Lockheed Martin anchor customer MOU signed before ground broken. Waste ponds at site: est. $3B recoverable metal. Target: 44 MT germanium + 54 MT gallium from 2030.</div>
+          <div class="access-note">Korean Stock Exchange only. No US ADR.<br>Access: <a href="https://www.interactivebrokers.com" target="_blank">Interactive Brokers</a> → search 010130.KS<br>ETF indirect: NYSE: EWY (iShares MSCI South Korea)</div>
+        </div>
+        <div class="plan-card pb">
+          <div class="plan-lbl">Plan B — Alaska Ore</div>
+          <div class="plan-co">Teck Resources</div>
+          <div class="plan-loc">Red Dog Mine, Alaska · NYSE: TECK</div>
+          <span class="badge b-op">Operating — Refining in Canada</span>
+          <div class="plan-body">World's largest zinc reserves on NANA Alaska Native land. USGS estimates 2,500 tons Ge in US zinc reserves. Concentrates ship to Trail BC refinery — Ge recovered there. 12–15 MT/yr now, expanding to 19 MT by 2027. Blockchain pilot tracing Red Dog Ge to fiber cable manufacturers.</div>
+          <div class="access-note">US-listed. Standard brokerage. NYSE: TECK<br>Also Toronto Stock Exchange: TECK.B</div>
+        </div>
+        <div class="plan-card pc">
+          <div class="plan-lbl">Plan C — Operating Now</div>
+          <div class="plan-co">Umicore Quapaw + 5N Plus Utah</div>
+          <div class="plan-loc">Quapaw OK (pop. 947) + St. George UT</div>
+          <span class="badge b-op">Operating</span><span class="badge b-exp">Gov-Funded Expansion</span>
+          <div class="plan-body">Umicore has operated a Ge wafer plant in Quapaw, Oklahoma since 2010 — supplying NASA Mars missions and most satellite solar cells. 5N Plus Utah received $18.1M federal grant Jan 2026 to expand to 20 MT/yr high-purity Ge. Both operating. Both defense-qualified.</div>
+          <div class="access-note">Umicore: Euronext Brussels EBR: UMI (international brokerage)<br>5N Plus: TSX: VNP / OTC: FPLSF</div>
+        </div>
+        <div class="plan-card pd">
+          <div class="plan-lbl">Plan D — Allied Jurisdiction</div>
+          <div class="plan-co">Alcoa Australia + Teck Canada</div>
+          <div class="plan-loc">Wagerup, Australia + Trail, BC Canada</div>
+          <span class="badge b-exp">FID Late 2026</span>
+          <div class="plan-body">US + Australian governments announced Oct 2025 JV with Alcoa for gallium recovery circuit at Wagerup alumina refinery — 100 MT/yr gallium from aluminum smelting byproduct. Same zero-cost-basis logic. Teck Trail BC already operating Ge recovery, expanding.</div>
+          <div class="access-note">Alcoa: NYSE: AA — standard US brokerage<br>Teck: NYSE: TECK (same as Plan B)</div>
+        </div>
+      </div>
+
+      <!-- SECRET BOX -->
+      <div class="secret">
+        <div class="secret-lbl">▸ The Story Nobody Has Written</div>
+        <p><strong>A town of 947 people in northeast Oklahoma, 85 miles from Tulsa, has been quietly supplying the germanium wafers that power the solar cells on NASA's Mars Pathfinder, Sojourner, and Phoenix landers — and the vast majority of every commercial satellite flying today.</strong><br><br>
+        Umicore built a $51 million germanium wafer facility in Quapaw, Oklahoma in 2010. It has operated continuously since. The wafers grown there — a three-day process per crystal, polished to a mirror-perfect disc — are the substrate that makes satellite solar cells achieve 30%+ efficiency in space. The facility appears in no AI infrastructure supply chain analysis. It has been there for 15 years. It is Plan C. It is operating right now.</p>
+      </div>
+
+      <!-- INVESTMENT TABLE -->
+      <div class="sec"><div class="sec-n">02</div><div class="sec-t">Complete Investment Map — Every Company, Every Tier</div></div>
+
+      <div class="callout">
+        <strong>Access key:</strong>
+        Standard brokerage = any US account (Fidelity, Schwab, TD Ameritrade) ·
+        International brokerage = Interactive Brokers, Schwab Global, or Fidelity International required ·
+        OTC = accessible via US brokerage, search by ticker, verify liquidity ·
+        CSE = Canadian Securities Exchange via Interactive Brokers or TD Direct
+      </div>
+
+      <div class="tw">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Ticker</th>
+              <th>Plan</th>
+              <th>Access</th>
+              <th>Status</th>
+              <th>Key Thesis Point</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-co">Korea Zinc</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/010130.KS" target="_blank">KRX: 010130</a></td>
+              <td>A — Primary</td>
+              <td>International brokerage (IB)</td>
+              <td><span class="badge b-con">Construction</span></td>
+              <td>$3B waste pond, DoD-backed, Lockheed anchor — most important company in this map</td>
+            </tr>
+            <tr>
+              <td class="td-co">Teck Resources</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/TECK" target="_blank">NYSE: TECK</a></td>
+              <td>B — Alaska</td>
+              <td>Standard US brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Red Dog world's largest Zn reserves — 2,500T estimated Ge. Trail refinery expanding.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Umicore</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/UMI.BR" target="_blank">EBR: UMI</a></td>
+              <td>C — Quapaw OK</td>
+              <td>International brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Only Western Ge refiner + recycler. NASA satellite solar cells. 50%+ recycled feedstock.</td>
+            </tr>
+            <tr>
+              <td class="td-co">5N Plus</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/VNP.TO" target="_blank">TSX: VNP</a> / <a href="https://finance.yahoo.com/quote/FPLSF" target="_blank">OTC: FPLSF</a></td>
+              <td>C — Utah</td>
+              <td>TSX or US OTC</td>
+              <td><span class="badge b-exp">Expanding</span></td>
+              <td>$18.1M US gov grant Jan 2026. Space-qualified wafers. AZUR SPACE satellite solar cells.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Alcoa</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/AA" target="_blank">NYSE: AA</a></td>
+              <td>D — Gallium</td>
+              <td>Standard US brokerage</td>
+              <td><span class="badge b-exp">FID Pending</span></td>
+              <td>US/AU gov JV for 100 MT/yr gallium from Wagerup alumina refinery, Australia.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Boliden</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/BOL.ST" target="_blank">STO: BOL</a></td>
+              <td>B alt — Nordic</td>
+              <td>International brokerage</td>
+              <td><span class="badge b-op">Undermonetized</span></td>
+              <td>Major Nordic zinc smelter with Ge recovery not yet fully developed. Catalyst: offtake agreement.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Glencore</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/GLEN.L" target="_blank">LSE: GLEN</a> / <a href="https://finance.yahoo.com/quote/GLNCY" target="_blank">OTC: GLNCY</a></td>
+              <td>B scale</td>
+              <td>LSE or OTC ADR</td>
+              <td><span class="badge b-op">Undermonetized</span></td>
+              <td>World's largest commodity trader. CEO called critical mineral byproduct recovery "most obvious deal."</td>
+            </tr>
+            <tr>
+              <td class="td-co">Shin-Etsu Chemical</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/4063.T" target="_blank">TYO: 4063</a></td>
+              <td>Upstream SiCl₄</td>
+              <td>International brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>World's largest SiCl₄ supplier outside China. Dual exposure: semiconductor wafers + fiber preforms.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Air Products</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/APD" target="_blank">NYSE: APD</a></td>
+              <td>Upstream He</td>
+              <td>Standard US brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Dominant US helium distributor. Helium required for fiber drawing furnaces. Non-renewable supply.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Lumentum</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/LITE" target="_blank">NASDAQ: LITE</a></td>
+              <td>Downstream / Alt</td>
+              <td>Standard US brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Silicon photonics reduces Ge-dependent fiber per datacenter. Nvidia $2B investment. ISL relevance.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Corning</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/GLW" target="_blank">NYSE: GLW</a></td>
+              <td>Downstream fiber</td>
+              <td>Standard US brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Dominant US fiber maker. Amazon, Meta, Nvidia prepayment deals locked. Most upside already captured.</td>
+            </tr>
+            <tr>
+              <td class="td-co">Prysmian</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/PRY.MI" target="_blank">BIT: PRY</a></td>
+              <td>Downstream fiber</td>
+              <td>International brokerage</td>
+              <td><span class="badge b-op">Operating</span></td>
+              <td>Best Western fiber producer after Corning. Hollow-Core Fiber R&D could eliminate Ge dependency.</td>
+            </tr>
+            <tr style="background:rgba(216,112,48,0.04);">
+              <td class="td-co">Blue Moon Metals</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/MOON.CN" target="_blank">CSE: MOON</a></td>
+              <td>Exploration</td>
+              <td>CSE via IB / TD Direct</td>
+              <td><span class="badge b-pre">Pre-Production</span></td>
+              <td>Teck's Apex Ge/Ga/Cu mine transferred Feb 2026. Primary Ge — rare. Pre-revenue, high risk.</td>
+            </tr>
+            <tr style="background:rgba(216,112,48,0.04);">
+              <td class="td-co">Germanium Mining Corp</td>
+              <td class="td-plan"><a href="https://finance.yahoo.com/quote/EMSKF" target="_blank">OTCQB: EMSKF</a></td>
+              <td>Exploration</td>
+              <td>OTC US markets</td>
+              <td><span class="badge b-pre">Early Exploration</span></td>
+              <td>Nevada + Quebec Ge assets. Maximum speculative upside. Pre-resource estimate stage.</td>
+            </tr>
+            <tr style="background:rgba(224,64,64,0.04);">
+              <td class="td-co">NANA Regional Corp</td>
+              <td class="td-plan" style="color:#e5e7eb;">Not tradeable</td>
+              <td>Land — Plan B</td>
+              <td style="color:#e04040;font-size:11px;">Private — ANCSA Corp. Shares non-transferable. Institutional debt only.</td>
+              <td><span class="badge" style="background:rgba(224,64,64,0.1);border:1px solid rgba(224,64,64,0.25);color:#e04040;">Not Accessible</span></td>
+              <td>Owns land under Red Dog Mine. ~2,500T Ge estimated in reserves. 15,000 Inupiat shareholders. The original "didn't know what they had" story.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- GAP WINDOW -->
+      <div class="sec"><div class="sec-n">03</div><div class="sec-t">The 2026–2030 Gap Window</div></div>
+
+      <p class="prose">
+        The supply gap between problem-understood and solution-operational runs from now through approximately 2030.
+        <strong>China's ban suspension expires November 2026.</strong> Korea Zinc Tennessee reaches full germanium output in 2030.
+        5N Plus Utah expansion delivers meaningful output in 2027–2028. The window in between is when supply
+        chain disruption risk is highest — and when the investment returns on early positions are
+        most asymmetric. US Ambassador Hoekstra's "economic fortress" statement at the Quebec City
+        Mining Investment Event on June 3, 2026 signals that both governments understand the timeline
+        and are actively working to close it.
+      </p>
+
+      <p class="prose">
+        The space economy dimension sharpens the urgency. Every commercial satellite manufacturer —
+        and every defense prime building surveillance, communications, or navigation payloads —
+        depends on the same germanium supply chain for their solar cells and IR optics.
+        The AI infrastructure buildout and the space economy buildout are competing for the
+        same constrained material from the same constrained geography.
+        <strong>Whoever secures non-Chinese germanium supply at scale controls the cost structure
+        of both simultaneously.</strong>
+      </p>
+
+    </div><!-- end oe-content -->
+
+    <!-- FOOTER -->
+    <div class="oe-footer">
+      <div class="footer-left">
+        Orbital Economics · Orbit2Orbit Express<br>
+        Published June 9, 2026 · For informational purposes only<br>
+        Not investment advice. Verify all data independently.
+      </div>
+      <div class="footer-right">
+        <a href="https://orbit2orbitexpress.com" class="footer-btn fb-home" target="_blank">← orbit2orbitexpress.com</a>
+        <a href="https://orbit2orbitexpress.substack.com" class="footer-btn fb-sub" target="_blank">Subscribe to Orbital Economics ↗</a>
+      </div>
+    </div>
+
+  </div><!-- end oe-modal -->
+</div><!-- end oe-overlay -->
+
+<script>
+function closeModal() {
+  document.getElementById('oe-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Track when the report modal is opened
+function openReport() {
+  document.getElementById('oe-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  trackEvent('report_open', { report: 'germanium_atlas' });
+}
+
+// PRINT — fires analytics, then opens the browser print dialog
+function printReport() {
+  trackEvent('report_print', { report: 'germanium_atlas', method: 'button' });
+  window.print();
+}
+
+// Catch-all: also fire when someone uses Ctrl+P / Cmd+P directly,
+// so print tracking is near-complete, not just button clicks.
+window.addEventListener('beforeprint', function() {
+  trackEvent('report_print', { report: 'germanium_atlas', method: 'system' });
+});
+
+// SHARE — native share sheet on mobile, copy-link fallback on desktop
+function shareReport() {
+  var shareData = {
+    title: 'Germanium Investment Atlas — Orbital Economics',
+    text: 'The supply chain map connecting AI fiber, satellite solar cells, and space defense.',
+    url: window.location.href
+  };
+  if (navigator.share) {
+    navigator.share(shareData)
+      .then(function(){ trackEvent('report_share', { report: 'germanium_atlas', method: 'native' }); })
+      .catch(function(){ /* user cancelled — no event */ });
+  } else {
+    // Desktop fallback: copy URL to clipboard
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      var fb = document.getElementById('shareFeedback');
+      fb.classList.add('show');
+      setTimeout(function(){ fb.classList.remove('show'); }, 2000);
+      trackEvent('report_share', { report: 'germanium_atlas', method: 'copy_link' });
+    });
+  }
+}
+</script>
+
+</body>
+</html>

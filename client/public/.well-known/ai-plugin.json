@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Orbit to Orbit Express",
+  "name_for_model": "orbit2orbit_express",
+  "description_for_human": "Calculate space launch costs, compare 200+ aerospace companies, track upcoming launches, and explore space education for kids. Professional space cargo logistics for aerospace engineers and researchers.",
+  "description_for_model": "Orbit to Orbit Express is a space cargo logistics and launch intelligence platform. Features include: (1) Launch cost calculator for payloads to LEO, GEO, Moon, Mars, and deep space with rocket compatibility analysis for SpaceX, ULA, Rocket Lab, ISRO, Arianespace, Roscosmos, (2) 30-day launch calendar with real-time tracking and countdown timers, (3) Space industry company directory with 200+ companies and agencies searchable by country and capability, (4) Space education section for kids with interactive activities, (5) Space industry news feeds, (6) Environmental impact scoring, regulatory compliance guidance, and insurance cost estimation. Target users: aerospace engineers, university researchers, defense contractors, space startups, students, and space agencies worldwide. Freemium pricing: Free calculator, Pro $19/month, Enterprise custom.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://orbit2orbitexpress.com/api/openapi.json"
+  },
+  "logo_url": "https://orbit2orbitexpress.com/generated-icon.png",
+  "contact_email": "valgin2150@gmail.com",
+  "legal_info_url": "https://orbit2orbitexpress.com/"
+}

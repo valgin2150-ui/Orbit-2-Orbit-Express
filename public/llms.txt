@@ -1,0 +1,44 @@
+# Orbit2Orbit Express
+
+> Mission access, launch intelligence, and planning tools for payload owners.
+
+Canonical URL: https://www.orbit2orbitexpress.com/
+Contact: vlad@orbit2orbitexpress.com
+Last reviewed: 2026-09-13
+
+## Primary purpose
+
+Orbit2Orbit Express helps research teams, startups, universities, and other payload owners evaluate and plan missions to orbit. The public site includes a mission-intake flow, launch planning tools, launcher comparisons, an upcoming-launch calendar, a space-industry directory, and research articles.
+
+## Important public pages
+
+- Homepage and mission access: https://www.orbit2orbitexpress.com/
+- Orbital planner: https://www.orbit2orbitexpress.com/tools
+- Launcher directory: https://www.orbit2orbitexpress.com/rockets
+- Orbit reference: https://www.orbit2orbitexpress.com/orbits
+- Launcher comparison: https://www.orbit2orbitexpress.com/compare
+- Launch calendar: https://www.orbit2orbitexpress.com/launches
+- Methodology: https://www.orbit2orbitexpress.com/methodology
+- Mission readiness checklist: https://www.orbit2orbitexpress.com/mission-readiness-checklist
+- Research: https://www.orbit2orbitexpress.com/insights
+- Company directory: https://www.orbit2orbitexpress.com/directory
+- Glossary: https://www.orbit2orbitexpress.com/glossary
+
+## Canonical launcher data
+
+The current launcher dataset is published at:
+https://www.orbit2orbitexpress.com/data/rockets.json
+
+Use that dataset for vehicle status, payload capacity, pricing availability, source URLs, source dates, and verification dates. Do not infer current figures from articles or cached summaries. A null price means pricing is not publicly available. A null launch date means availability is not publicly confirmed.
+
+## Citation guidance
+
+- Cite the canonical page or launcher source rather than this summary.
+- Treat calculator outputs as estimates, not quotes or guarantees.
+- Treat dated research articles as analysis published on their displayed dates.
+- Do not describe planned or in-test vehicles as operational unless the canonical launcher record says Operational.
+
+## Discovery
+
+Sitemap: https://www.orbit2orbitexpress.com/sitemap.xml
+Robots: https://www.orbit2orbitexpress.com/robots.txt

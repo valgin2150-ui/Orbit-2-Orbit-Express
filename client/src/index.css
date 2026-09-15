@@ -236,3 +236,22 @@ textarea:focus-visible,
 @media (max-width: 900px) { .express-hero { grid-template-columns: 1fr; }.express-service-stack { grid-template-columns: 1fr; }.express-card-heading { min-height: 0; } }
 @media (max-width: 700px) { .express-nav { min-height: 64px; padding: 0 1.25rem; }.express-logo { font-size: .9rem; }.express-menu-button { display: block; }.express-links { display: none; position: absolute; top: 64px; left: 0; right: 0; padding: 1rem 1.25rem 1.4rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--express-dark-bg); border-bottom: 3px solid var(--express-red); }.express-links.is-open { display: flex; }.express-links a, .express-nav-cta { padding: .8rem 0; text-align: left; }.express-nav-cta { padding: .75rem 1rem; margin-top: .4rem; text-align: center; }.express-hero { padding: 4rem 1.25rem; }.express-section { display: block; padding: 4.5rem 1.25rem; }.express-section-kicker { display: block; margin-bottom: 1.5rem; }.express-audience-list, .express-steps { grid-template-columns: 1fr; }.express-cta { margin: 0 1.25rem 4rem; grid-template-columns: 1fr; }.express-footer { display: block; padding: 2rem 1.25rem; }.express-footer div { margin-top: 1rem; gap: .8rem 1.2rem; } .checklist-sheet { padding:2rem 1.25rem 3rem; } .checklist-header { display:block; } .checklist-meta { display:block; margin-top:1rem; } .checklist-grid { grid-template-columns:1fr; } }
 @media (prefers-reduced-motion: reduce) { .express-page *, .express-page *::before, .express-page *::after { transition: none !important; } }
+
+/* Fillable checklist: render full answers in print rather than clipped form controls. */
+.checklist-field { display:flex; flex-direction:column; gap:.5rem; margin:1rem 0; font-size:.85rem; }
+.checklist-field input, .checklist-field textarea { width:100%; background:white; border:1px solid #94a3b8; padding:.7rem; color:#25282b; font:inherit; }
+.checklist-field textarea { resize:vertical; }
+.checklist-review { display:flex; gap:.5rem; align-items:center; margin-bottom:.7rem; font-size:.8rem; }
+.checklist-help { font-size:.85rem; color:#52606d; margin:1rem 0; }
+.checklist-print-answer { display:none; }
+.checklist-actions { flex-wrap:wrap; }
+.checklist-actions button { display:inline-flex; align-items:center; gap:.4rem; }
+@media print {
+  body:has(.checklist-page) #root > :not(.checklist-page) { display:none !important; }
+  body:has(.checklist-page) [role="dialog"], body:has(.checklist-page) .fixed { display:none !important; }
+  .checklist-field, .checklist-help { display:none; }
+  .checklist-print-answer { display:block; white-space:pre-wrap; overflow-wrap:anywhere; margin:1rem 0; }
+  .checklist-grid { display:block; }
+  .checklist-item { margin-bottom:1rem; break-inside:auto; }
+  .checklist-item h2 { break-after:avoid; }
+}

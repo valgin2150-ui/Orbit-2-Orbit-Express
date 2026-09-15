@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ArrowUpRight, Check, Menu, X } from "lucide-react";
 import { Link } from "wouter";
 import { useMissionIntake } from "@/contexts/MissionIntakeContext";
@@ -14,7 +13,7 @@ const audiences = [
 ];
 
 const steps = [
-  ["01", "Mission Clarity Call", "A two-hour conversation to understand your objective, your constraints, and whether a space mission actually solves your problem. We'll tell you the truth — including if it doesn't make sense yet."],
+  ["01", "Mission Clarity Call", "A 30-minute introductory conversation to understand your objective, constraints, and the questions that need answering. If further work is useful, we agree the scope of a separate Mission Clarity Session."],
   ["02", "Architecture and Access", "If the mission is viable, we translate your objective into requirements — orbit, timeline, mass, power, integration, regulatory — and identify the real providers who can execute at your scale."],
   ["03", "Provider Coordination", "We manage the interfaces between launch, spacecraft, integration, ground operations, and compliance specialists. You have one point of contact. We handle the complexity behind it."],
   ["04", "Readiness and Decision Gates", "We turn open questions into documented decisions, track technical and commercial risks, and show you what must be true before you commit capital or schedule."],
@@ -36,7 +35,7 @@ const services = [
   {
     name: "Mission Orchestration Retainer",
     description: "Ongoing coordination across the mission development cycle. We manage providers, maintain the risk register, track milestones, and keep the work moving — so you can stay focused on your science or product.",
-    deliverables: ["Single point of contact across all providers", "Monthly status and risk review", "Launch campaign coordination", "Compliance and insurance management", "Decision-gate facilitation"],
+    deliverables: ["Single point of contact across all providers", "Monthly status and risk review", "Launch campaign coordination", "Coordination with compliance and insurance specialists", "Decision-gate facilitation"],
   },
 ];
 
@@ -48,11 +47,15 @@ export default function ExpressHome() {
     title: "Orbit2Orbit Express — Mission Architecture & Space Mission Orchestration",
     description: "Mission architecture and space mission orchestration for research teams, startups, and payload owners navigating a credible path to orbit.",
     canonical: "/",
+    jsonLd: {
+      "@context": "https://schema.org", "@type": "Service",
+      name: "Space Mission Architecture and Orchestration",
+      url: "https://www.orbit2orbitexpress.com/",
+      provider: { "@id": "https://www.orbit2orbitexpress.com/#organization" },
+      description: "Requirements definition, mission pathway evaluation, interface planning, and specialist coordination for payload owners."
+    },
   });
 
-  useEffect(() => {
-     document.title = "Orbit2Orbit Express — Mission Architecture & Space Mission Orchestration";
-  }, []);
 
   const closeMenu = () => setMenuOpen(false);
   const prepareBrief = () => { closeMenu(); openMissionIntake(); };
@@ -85,7 +88,7 @@ export default function ExpressHome() {
               <a className="express-button express-button-primary" href={bookingUrl} target="_blank" rel="noopener noreferrer">Book a Mission Clarity Call <ArrowUpRight size={17} /></a>
               <button className="express-button express-button-quiet" onClick={prepareBrief}>Prepare Your Mission Brief</button>
             </div>
-            <p className="express-action-note">Tell us what you're trying to accomplish. We'll start there.</p>
+            <p className="express-action-note">Start with a 30-minute introductory call, or <Link href="/mission-readiness-checklist" className="underline">fill in the Mission Readiness Checklist</Link>.</p>
           </div>
           <aside className="express-credentials">
             <h2>Operating Parameters</h2>

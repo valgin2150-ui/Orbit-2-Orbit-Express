@@ -45,7 +45,7 @@ function getCurrentQuarter(): string {
 export default function Home() {
   useSEO({
     title: "Orbital Planner & Launch Expense Estimator | Orbit to Orbit Express",
-    description: "Free orbital transfer cost calculator for aerospace engineers. Estimate satellite launch expenses, compare rockets from SpaceX, ULA, ISRO, Rocket Lab, Arianespace, JAXA & CNSA, and plan missions to LEO, GEO, Moon & Mars. Professional space cargo logistics and mission planning tools used by NASA, JPL, Blue Origin, Astranis, and aerospace teams worldwide.",
+    description: "Free orbital transfer cost calculator for aerospace engineers. Estimate satellite launch expenses, compare rockets from SpaceX, ULA, ISRO, Rocket Lab, Arianespace, JAXA & CNSA, and plan missions to LEO, GEO, Moon & Mars. Planning estimates for initial exploration; provider quotes and mission-specific verification are required.",
     canonical: "/tools",
     keywords: "orbital transfer cost calculator, launch expense estimator, space launch cost calculator, satellite launch cost, rocket comparison tool, mission planning software, SpaceX launch cost, LEO launch price, delta-v calculator, space cargo logistics, orbital mechanics calculator, CubeSat launch cost 2026, orbit transfer cost, NASA, JPL, SpaceX, Blue Origin, Astranis, Aether Industries, ULA, Rocket Lab, Arianespace, ISRO, JAXA, CNSA, Roscosmos, KARI, UAE Space Agency, Saudi Space Commission, CONAE Argentina, ACE Chile, Luxembourg Space Agency, ESA, Seattle, Space Alley, Kent WA, Redmond WA, Cape Canaveral, Vandenberg, Kourou, Baikonur, Jiuquan, Sriharikota, Mahia Peninsula, Wenchang, Tanegashima, Alcantara, Satish Dhawan, Plesetsk, Vostochny",
     jsonLd: {

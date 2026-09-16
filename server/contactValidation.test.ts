@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { insertMissionIntakeSchema } from "@shared/schema";
-import { assertEmailSent } from "./resend";
+import { assertEmailSent, resolveSenderEmail, validateSenderEmail } from "./resend";
 
 const validIntake = {
   name: "Mission Owner",
@@ -51,4 +51,19 @@ test("email delivery is successful only when Resend returns a message id", () =>
   assert.equal(assertEmailSent({ data: { id: "email_123" }, error: null }), "email_123");
   assert.throws(() => assertEmailSent({ data: null, error: { message: "rejected" } }));
   assert.throws(() => assertEmailSent({ data: null, error: null }));
+});
+
+test("configured Resend sender accepts addresses and display names but rejects malformed values", () => {
+  assert.equal(validateSenderEmail("sender@example.com"), "sender@example.com");
+  assert.equal(validateSenderEmail("Orbit2Orbit <sender@example.com>"), "Orbit2Orbit <sender@example.com>");
+  assert.equal(validateSenderEmail('"Orbit2Orbit <sender@example.com>"'), "Orbit2Orbit <sender@example.com>");
+  assert.equal(validateSenderEmail("Orbit2Orbit &lt;sender@example.com&gt;"), "Orbit2Orbit <sender@example.com>");
+  assert.throws(() => validateSenderEmail("not-an-email"), /RESEND_FROM_EMAIL/);
+  assert.throws(() => validateSenderEmail("Orbit2Orbit <sender@example>"), /RESEND_FROM_EMAIL/);
+  assert.throws(() => validateSenderEmail("sender@example.com\nBcc: attacker@example.com"), /RESEND_FROM_EMAIL/);
+});
+
+test("invalid or missing configured senders safely use the verified-domain sender", () => {
+  assert.equal(resolveSenderEmail(undefined), "Orbit2Orbit Express <noreply@orbit2orbitexpress.com>");
+  assert.equal(resolveSenderEmail("not-an-email"), "Orbit2Orbit Express <noreply@orbit2orbitexpress.com>");
 });

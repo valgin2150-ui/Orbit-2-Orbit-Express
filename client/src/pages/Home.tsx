@@ -69,6 +69,8 @@ export default function Home() {
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [reportEmail, setReportEmail] = useState("");
   const [reportSubmitted, setReportSubmitted] = useState(false);
+  const [reportLoading, setReportLoading] = useState(false);
+  const [reportError, setReportError] = useState<string | null>(null);
 
   // Live launch count from API (next 90 days)
   const [upcomingLaunches, setUpcomingLaunches] = useState<number | null>(null);
@@ -475,7 +477,8 @@ export default function Home() {
                     onSubmit={async (e) => {
                       e.preventDefault();
                       if (!reportEmail.trim()) return;
-                      setReportSubmitted(true);
+                      setReportLoading(true);
+                      setReportError(null);
                       try {
                         const resp = await fetch("/api/download-report", {
                           method: "POST",
@@ -483,16 +486,20 @@ export default function Home() {
                           body: JSON.stringify({ email: reportEmail }),
                         });
                         const data = await resp.json();
-                        if (data.downloadUrl) {
-                          const link = document.createElement("a");
-                          link.href = data.downloadUrl;
-                          link.download = "2026-Orbital-Market-Entry-Report-Q2Q3-v5.pdf";
-                          document.body.appendChild(link);
-                          link.click();
-                          document.body.removeChild(link);
+                        if (!resp.ok || !data.downloadUrl) {
+                          throw new Error(data.error || "Report request failed");
                         }
+                        setReportSubmitted(true);
+                        const link = document.createElement("a");
+                        link.href = data.downloadUrl;
+                        link.download = "2026-Orbital-Market-Entry-Report-Q2Q3-v5.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
                       } catch {
-                        window.open("/2026-Orbital-Market-Entry-Report-Q2Q3-v5.pdf", "_blank");
+                        setReportError("We couldn't deliver your report request. Please retry, or email vlad@orbit2orbitexpress.com directly.");
+                      } finally {
+                        setReportLoading(false);
                       }
                     }}
                     className="flex flex-col sm:flex-row gap-2"
@@ -507,11 +514,13 @@ export default function Home() {
                     />
                     <Button
                       type="submit"
+                      disabled={reportLoading}
                       className="bg-gray-900 text-white hover:bg-gray-800 font-medium text-sm flex-shrink-0"
                     >
                       <Download className="w-4 h-4 mr-2" />
-                      Get Free Report
+                      {reportLoading ? "Sending..." : "Get Free Report"}
                     </Button>
+                    {reportError && <p className="text-sm text-red-600">{reportError}</p>}
                   </form>
                 )}
               </div>

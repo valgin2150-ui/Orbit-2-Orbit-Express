@@ -21,22 +21,22 @@
   --background: 0 0% 100%;
   --foreground: 0 0% 9%;
   --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
+  --muted-foreground: 0 0% 36%;
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 9%;
   --card: 0 0% 100%;
   --card-foreground: 0 0% 9%;
   --border: 0 0% 90%;
   --input: 0 0% 90%;
-  --primary: 0 100% 45%;
+  --primary: 353 82% 39%;
   --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 96%;
   --secondary-foreground: 0 0% 9%;
-  --accent: 0 100% 45%;
+  --accent: 353 82% 39%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 84% 60%;
+  --destructive: 353 82% 39%;
   --destructive-foreground: 0 0% 100%;
-  --ring: 0 100% 45%;
+  --ring: 353 82% 39%;
   --radius: 0;
   --chart-1: 0 100% 45%;
   --chart-2: 0 0% 20%;
@@ -173,11 +173,11 @@ textarea:focus-visible,
 /* Orbit2Orbit Express — focused mission-access homepage */
 .express-page {
   --express-dark-bg: #303234;
-  --express-red: #dc2626;
-  --express-red-dark: #b91c1c;
-  --express-ink: #000000;
-  --express-muted: #475569;
-  --express-rule: #cbd5e1;
+  --express-red: #b4232f;
+  --express-red-dark: #8f1823;
+  --express-ink: #17191b;
+  --express-muted: #3f4b56;
+  --express-rule: #687784;
   --express-paper: #f8fafc;
   min-height: 100dvh;
   background: var(--express-paper);
@@ -185,7 +185,7 @@ textarea:focus-visible,
   font-family: 'Inter', sans-serif;
   line-height: 1.65;
 }
-.express-action-note { margin: .65rem 0 0; color: #64748b; font: .68rem/1.5 'JetBrains Mono', monospace; letter-spacing: .01em; }
+.express-action-note { margin: .65rem 0 0; color: #52606d; font: .68rem/1.5 'JetBrains Mono', monospace; letter-spacing: .01em; }
 .express-provider-note { margin-top: 1.2rem; padding: 1rem 1.1rem; border-left: 3px solid var(--express-red); background: #eef2f5; color: #334155; font-size: .82rem; }
 .express-tool-path { margin-top: 1.4rem; padding: 1.1rem 1.2rem; border: 1px solid #cbd5e1; background: #eef2f5; }
 .express-tool-path strong { display: block; margin-bottom: .3rem; color: var(--express-ink); font-size: .82rem; }
@@ -193,7 +193,7 @@ textarea:focus-visible,
 .checklist-page { min-height: 100dvh; background: #eef1f3; color: #25282b; font-family: 'Inter', sans-serif; }
 .checklist-sheet { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; background: #f8fafb; min-height: 100dvh; }
 .checklist-header { border-top: 4px solid #dc2626; padding-top: 1.5rem; display:flex; justify-content:space-between; gap:2rem; align-items:flex-start; }
-.checklist-kicker { color:#dc2626; font:600 .7rem 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+.checklist-kicker { color:#a51d2a; font:600 .7rem 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
 .checklist-header h1 { margin:.6rem 0 .8rem; font-size:clamp(2rem,5vw,3.5rem); letter-spacing:-.04em; line-height:1.05; }
 .checklist-header p { max-width:600px; color:#52606d; }
 .checklist-meta { color:#52606d; font: .7rem 'JetBrains Mono',monospace; white-space:nowrap; }
@@ -236,6 +236,119 @@ textarea:focus-visible,
 @media (max-width: 900px) { .express-hero { grid-template-columns: 1fr; }.express-service-stack { grid-template-columns: 1fr; }.express-card-heading { min-height: 0; } }
 @media (max-width: 700px) { .express-nav { min-height: 64px; padding: 0 1.25rem; }.express-logo { font-size: .9rem; }.express-menu-button { display: block; }.express-links { display: none; position: absolute; top: 64px; left: 0; right: 0; padding: 1rem 1.25rem 1.4rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--express-dark-bg); border-bottom: 3px solid var(--express-red); }.express-links.is-open { display: flex; }.express-links a, .express-nav-cta { padding: .8rem 0; text-align: left; }.express-nav-cta { padding: .75rem 1rem; margin-top: .4rem; text-align: center; }.express-hero { padding: 4rem 1.25rem; }.express-section { display: block; padding: 4.5rem 1.25rem; }.express-section-kicker { display: block; margin-bottom: 1.5rem; }.express-audience-list, .express-steps { grid-template-columns: 1fr; }.express-cta { margin: 0 1.25rem 4rem; grid-template-columns: 1fr; }.express-footer { display: block; padding: 2rem 1.25rem; }.express-footer div { margin-top: 1rem; gap: .8rem 1.2rem; } .checklist-sheet { padding:2rem 1.25rem 3rem; } .checklist-header { display:block; } .checklist-meta { display:block; margin-top:1rem; } .checklist-grid { grid-template-columns:1fr; } }
 @media (prefers-reduced-motion: reduce) { .express-page *, .express-page *::before, .express-page *::after { transition: none !important; } }
+
+/*
+ * Contrast correction layer
+ * Keep the existing charcoal / white / red system, but do not use light
+ * gray or orange-red as body text. These tokens are deliberately darker
+ * than their brand-adjacent originals so normal, interactive, and focus
+ * states retain practical WCAG AA contrast on white and pale surfaces.
+ */
+:root {
+  --a11y-red: #a51d2a;
+  --a11y-red-hover: #7f1420;
+  --a11y-charcoal: #25282b;
+  --a11y-muted: #52606d;
+  --a11y-subtle: #687784;
+  --a11y-orange: #8a3f00;
+}
+
+/* Common Tailwind utility colors used for text throughout the app. */
+.text-gray-400,
+.text-gray-500,
+.text-slate-400,
+.text-slate-500,
+.text-zinc-400,
+.text-zinc-500 {
+  color: var(--a11y-muted) !important;
+}
+.text-gray-600,
+.text-slate-600,
+.text-zinc-600 {
+  color: #3f4b56 !important;
+}
+.text-amber-600,
+.text-amber-700,
+.text-orange-600,
+.text-orange-700,
+.text-\[\#FF6719\] {
+  color: var(--a11y-orange) !important;
+}
+.text-rail-red,
+.text-\[\#e3000f\] {
+  color: var(--a11y-red) !important;
+}
+
+/* Orange fills are only used as accents; use a red-orange with white text
+   contrast rather than the lighter default orange-500. */
+[class~="bg-orange-500"],
+[class~="bg-orange-600"],
+[class~="hover:bg-orange-600"]:hover,
+[class~="hover:bg-orange-700"]:hover {
+  background-color: #b9380a !important;
+}
+[class~="from-orange-500"],
+[class~="from-orange-600"] {
+  --tw-gradient-from: #b9380a var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(185 56 10 / 0) var(--tw-gradient-to-position) !important;
+}
+[class~="to-orange-500"],
+[class~="to-orange-600"] {
+  --tw-gradient-to: #b9380a var(--tw-gradient-to-position) !important;
+}
+
+/* Preserve readable hover states instead of fading into pale gray/orange. */
+[class~="hover:text-gray-400"]:hover,
+[class~="hover:text-gray-500"]:hover,
+[class~="hover:text-gray-600"]:hover,
+[class~="hover:text-slate-400"]:hover,
+[class~="hover:text-slate-500"]:hover,
+[class~="hover:text-amber-600"]:hover,
+[class~="hover:text-amber-700"]:hover,
+[class~="hover:text-orange-600"]:hover,
+[class~="hover:text-orange-700"]:hover,
+[class~="hover:text-[#FF6719]"]:hover {
+  color: var(--a11y-red) !important;
+}
+[class~="hover:bg-orange-700"]:hover {
+  background-color: #8a2a05 !important;
+}
+
+/* The red brand remains red, with a darker hover treatment for white text. */
+[class~="hover:bg-[#c0000d]"]:hover,
+[class~="hover:bg-[#c5000d]"]:hover,
+[class~="hover:bg-red-700"]:hover,
+.express-nav-cta:hover,
+.express-button-primary:hover {
+  background-color: var(--a11y-red-hover) !important;
+}
+
+/* Darken the orange-red utility used by the insights / kids surfaces. */
+.text-\[\#FF6719\],
+.text-\[\#ff6719\] {
+  color: var(--a11y-orange) !important;
+}
+[class~="hover:text-[#FF6719]/80"]:hover {
+  color: var(--a11y-red) !important;
+}
+
+/* Consistent keyboard indicator: dark enough on both paper and charcoal. */
+*:focus-visible {
+  outline-color: var(--a11y-red);
+  box-shadow: 0 0 0 1px var(--a11y-red);
+}
+.express-page :is(a, button):focus-visible {
+  outline-color: #f7d7da;
+  box-shadow: 0 0 0 1px #f7d7da;
+}
+
+/* Disabled controls remain identifiable without turning their labels pale. */
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: #52606d;
+}
 
 /* Fillable checklist: render full answers in print rather than clipped form controls. */
 .checklist-field { display:flex; flex-direction:column; gap:.5rem; margin:1rem 0; font-size:.85rem; }

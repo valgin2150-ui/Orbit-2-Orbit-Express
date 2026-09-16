@@ -478,6 +478,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const suggestion = insertCompanySuggestionSchema.parse(req.body);
       const savedSuggestion = await storage.saveCompanySuggestion(suggestion);
+
+      try {
+        const { client, fromEmail } = await getUncachableResendClient();
+        const result = await client.emails.send({
+          from: fromEmail,
+          to: "vlad@orbit2orbitexpress.com",
+          replyTo: suggestion.submitterEmail,
+          subject: `Company Suggestion — ${suggestion.name}`,
+          html: `
+            <h2>New Company Suggestion</h2>
+            <p><strong>Company:</strong> ${escapeHtml(suggestion.name)}</p>
+            <p><strong>Country:</strong> ${escapeHtml(suggestion.country)}</p>
+            <p><strong>Headquarters:</strong> ${escapeHtml(suggestion.headquartersCity)}</p>
+            <p><strong>Company type:</strong> ${escapeHtml(suggestion.companyType)}</p>
+            <p><strong>Segments:</strong> ${suggestion.segments.map(escapeHtml).join(", ")}</p>
+            <p><strong>Website:</strong> ${escapeHtml(suggestion.website)}</p>
+            ${suggestion.linkedin ? `<p><strong>LinkedIn:</strong> ${escapeHtml(suggestion.linkedin)}</p>` : ""}
+            <p><strong>Description:</strong> ${escapeHtml(suggestion.description)}</p>
+            <p><strong>Active products:</strong> ${escapeHtml(suggestion.activeProducts || "Not provided")}</p>
+            <hr />
+            <p><strong>Submitted by:</strong> ${escapeHtml(suggestion.submitterName || "Not provided")} (${escapeHtml(suggestion.submitterEmail)})</p>
+          `,
+        });
+        assertEmailSent(result);
+      } catch (emailError) {
+        console.error("[COMPANY SUGGESTION] Email notification failed:", emailError);
+        return res.status(502).json({
+          error: "Suggestion saved, but operator notification failed. Please email vlad@orbit2orbitexpress.com directly.",
+          id: savedSuggestion.id,
+        });
+      }
+
       res.status(201).json(savedSuggestion);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -669,18 +701,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/privacy-request", async (req, res) => {
     try {
-      const { email, type } = req.body;
-      if (!email || !type) {
-        return res.status(400).json({ error: "Email and request type are required" });
+      const parsed = z.object({
+        email: z.string().trim().email().max(254),
+        type: z.enum(["access", "deletion"]),
+      }).safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ error: "A valid email and request type are required", details: parsed.error.flatten() });
       }
-      if (!["access", "deletion"].includes(type)) {
-        return res.status(400).json({ error: "Invalid request type" });
-      }
+      const { email, type } = parsed.data;
       console.log(`[PRIVACY REQUEST] Type: ${type}, Email: ${email}, Date: ${new Date().toISOString()}`);
+
+      const { client, fromEmail } = await getUncachableResendClient();
+      const result = await client.emails.send({
+        from: fromEmail,
+        to: "vlad@orbit2orbitexpress.com",
+        replyTo: email,
+        subject: `Privacy Request — ${type}`,
+        html: `
+          <h2>Privacy Request</h2>
+          <p><strong>Request type:</strong> ${escapeHtml(type)}</p>
+          <p><strong>Requester email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Received:</strong> ${new Date().toISOString()}</p>
+        `,
+      });
+      assertEmailSent(result);
       res.json({ success: true, message: `Your ${type} request has been received. We will respond within 30 days.` });
     } catch (error) {
       console.error("Privacy request error:", error);
-      res.status(500).json({ error: "Failed to process privacy request" });
+      res.status(502).json({ error: "We could not deliver your privacy request. Please email vlad@orbit2orbitexpress.com directly." });
     }
   });
 
@@ -688,34 +736,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/download-report", async (req, res) => {
     try {
-      const { email } = req.body;
-      if (!email || typeof email !== "string") {
-        return res.status(400).json({ error: "Email is required" });
+      const parsed = z.object({ email: z.string().trim().email().max(254) }).safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ error: "A valid email is required", details: parsed.error.flatten() });
       }
-
-      try {
-        const { client, fromEmail } = await getUncachableResendClient();
-        await client.emails.send({
-          from: fromEmail,
-          to: "vlad@orbit2orbitexpress.com",
-          subject: "Report Download: 2026 Orbital Market Entry Report — Q2/Q3 Update",
-          html: `
-            <h2>New Report Download</h2>
-            <p><strong>Report:</strong> 2026 Orbital Market Entry Report — Q2/Q3 Update (v5)</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Time:</strong> ${new Date().toISOString()}</p>
-            <p><strong>Source:</strong> orbit2orbitexpress.com</p>
-          `,
-        });
-      } catch (emailErr) {
-        console.error("[REPORT] Email notification failed:", emailErr);
-      }
+      const { email } = parsed.data;
+      const { client, fromEmail } = await getUncachableResendClient();
+      const result = await client.emails.send({
+        from: fromEmail,
+        to: "vlad@orbit2orbitexpress.com",
+        subject: "Report Download: 2026 Orbital Market Entry Report — Q2/Q3 Update",
+        html: `
+          <h2>New Report Download</h2>
+          <p><strong>Report:</strong> 2026 Orbital Market Entry Report — Q2/Q3 Update (v5)</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Time:</strong> ${new Date().toISOString()}</p>
+          <p><strong>Source:</strong> orbit2orbitexpress.com</p>
+        `,
+      });
+      assertEmailSent(result);
 
       console.log(`[REPORT DOWNLOAD] Email: ${email}, Time: ${new Date().toISOString()}`);
       res.json({ success: true, downloadUrl: "/2026-Orbital-Market-Entry-Report-Q2Q3-v5.pdf" });
     } catch (error) {
       console.error("Report download error:", error);
-      res.status(500).json({ error: "Failed to process download request" });
+      res.status(502).json({ error: "We could not deliver your report request. Please email vlad@orbit2orbitexpress.com directly." });
     }
   });
 
@@ -918,16 +963,25 @@ Submitted via orbit2orbitexpress.com Mission Intake`,
   });
 
   app.post("/api/campaign-lead", async (req, res) => {
-    const { email, launchWindow, campaignSummary } = req.body;
-    if (!email) return res.status(400).json({ error: "Email required" });
+    const parsed = z.object({
+      email: z.string().trim().email().max(254),
+      launchWindow: z.string().trim().max(200).optional(),
+      campaignSummary: z.string().trim().max(1000).optional(),
+    }).safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({ error: "A valid email is required", details: parsed.error.flatten() });
+    }
+    const { email, launchWindow, campaignSummary } = parsed.data;
     try {
       const { client, fromEmail } = await getUncachableResendClient();
-      await client.emails.send({
+      const result = await client.emails.send({
         from: fromEmail,
         to: "vlad@orbit2orbitexpress.com",
+        replyTo: email,
         subject: `Campaign Lead — ${email}`,
-        html: `<p><strong>Email:</strong> ${email}</p><p><strong>Launch Window:</strong> ${launchWindow || "Not specified"}</p><p><strong>Campaign:</strong> ${campaignSummary || "N/A"}</p>`,
+        html: `<p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Launch Window:</strong> ${escapeHtml(launchWindow || "Not specified")}</p><p><strong>Campaign:</strong> ${escapeHtml(campaignSummary || "N/A")}</p>`,
       });
+      assertEmailSent(result);
       res.json({ ok: true });
     } catch (err) {
       console.error("[LEAD] Failed to send campaign lead email:", err);

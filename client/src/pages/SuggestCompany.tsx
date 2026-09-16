@@ -94,10 +94,13 @@ export default function SuggestCompany() {
         description: "Thank you for contributing to our directory. We'll review your suggestion soon."
       });
     },
-    onError: () => {
+    onError: (error) => {
+      const savedButNotNotified = error instanceof Error && error.message.includes("Suggestion saved");
       toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your suggestion. Please try again.",
+        title: savedButNotNotified ? "Suggestion saved, notification failed" : "Submission Failed",
+        description: savedButNotNotified
+          ? "Your suggestion was saved, but we couldn't notify our team. Please email vlad@orbit2orbitexpress.com directly."
+          : "There was an error submitting your suggestion. Please try again.",
         variant: "destructive"
       });
     }

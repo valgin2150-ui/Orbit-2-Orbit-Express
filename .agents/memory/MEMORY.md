@@ -1,0 +1,1 @@
+- [Resend domain verification](resend-domain-verification.md) — DNS can resolve before Resend finishes verification; poll status and confirm with a real send.

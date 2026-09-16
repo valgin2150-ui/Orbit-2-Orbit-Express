@@ -27,11 +27,13 @@ export function LeadCaptureForm({
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim()) return;
     setLoading(true);
+    setError(null);
     try {
       await apiRequest("POST", "/api/lead-capture", {
         name: name.trim(),
@@ -43,7 +45,7 @@ export function LeadCaptureForm({
       (window as any).plausible?.("Contact Submit");
       setSubmitted(true);
     } catch {
-      setSubmitted(true);
+      setError("We couldn't deliver your request. Please retry, or email vlad@orbit2orbitexpress.com directly.");
     } finally {
       setLoading(false);
     }
@@ -109,6 +111,7 @@ export function LeadCaptureForm({
           )}
           {loading ? "Sending..." : "Send"}
         </Button>
+        {error && <p className="text-sm text-red-600">{error}</p>}
       </form>
     </div>
   );

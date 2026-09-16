@@ -719,7 +719,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                 <div>
                   <FieldLabel>Let's talk</FieldLabel>
                   <p className="text-xs text-gray-400 mb-4">
-                    Send your Mission Brief directly to Vlad. We'll reach out within 24 hours to schedule a focused 30-minute conversation.
+                    Send your Mission Brief directly to Vlad for review. You can also book a free 30-minute conversation using the link below.
                   </p>
                   <div className="space-y-3 mb-5">
                     <Input
@@ -792,7 +792,7 @@ export function MissionIntakeModal({ isOpen, onClose }: MissionIntakeModalProps)
                   <p className="text-xs text-gray-400 mt-3">
                     Prefer to talk first?{" "}
                     <a href="https://calendar.app.google/nQ8xro2EQ9UwhqmT7" target="_blank" rel="noopener noreferrer" className="text-[#e3000f] underline">
-                      Book a direct 30-minute call
+                      Book a free 30-minute call
                     </a>
                     {" "}without completing this brief.
                   </p>
